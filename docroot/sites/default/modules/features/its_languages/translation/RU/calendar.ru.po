@@ -1,0 +1,54 @@
+# $Id$
+#
+# Mykolaiv (Russian) translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-07-23 07:45+0000\n"
+"PO-Revision-Date: 2017-07-23 07:45+0000\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Mykolaiv (Russian) <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=0; plural=(n!=1);\n"
+
+
+msgid "Januaryth"
+msgstr "Января"
+
+msgid "Februaryth"
+msgstr "Февраля"
+
+msgid "Marchth"
+msgstr "Марта"
+
+msgid "Aprilth"
+msgstr "Апреля"
+
+msgid "Mayth"
+msgstr "Мая"
+
+msgid "Juneth"
+msgstr "Июня"
+
+msgid "Julyth"
+msgstr "Июля"
+
+msgid "Augustth"
+msgstr "Августа"
+
+msgid "Septemberth"
+msgstr "Сентября"
+
+msgid "Octoberth"
+msgstr "Октября"
+
+msgid "Novemberth"
+msgstr "Ноября"
+
+msgid "Decemberth"
+msgstr "Декабря"

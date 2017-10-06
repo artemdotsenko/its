@@ -1,0 +1,63 @@
+/* Reviews. */
+.pane-its-reviews-panel-reviews {
+  background-color: $alabaster;
+  padding-bottom: 20px;
+  h2 {
+    margin-top: 44px;
+    margin-bottom: 65px;
+    text-transform: uppercase;
+    font-family: $pts;
+    letter-spacing: 4px;
+  }
+  .container {
+    max-width: 540px;
+    text-align: center;
+  }
+  .views-field-title {
+    font-weight: bold;
+    color: $black;
+    font-size: $huge-font-size;
+  }
+  .view-content {
+    position: relative;
+    .views-field-body {
+      margin-top: 30px;
+      margin-bottom: 16px;
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 22px;
+    }
+    .slick-next,
+    .slick-prev {
+      top: 94px;
+    }
+    .slick-next {
+      right: 57px;
+    }
+    .slick-prev {
+      left: 52px;
+    }
+  }
+  div.fivestar-widget-static {
+    width: 100px;
+    margin: 65px auto 0 auto;
+    .star {
+      text-indent: 0;
+      background: none;
+      width: 20px;
+      height: 20px;
+      color: $green;
+      font-size: 20px;
+      .on {
+        @extend .glyphicon;
+        @extend .glyphicon-star;
+        background: none;
+      }
+      .off {
+        @extend .glyphicon;
+        @extend .glyphicon-star-empty;
+        background: none;
+      }
+    }
+  }
+}

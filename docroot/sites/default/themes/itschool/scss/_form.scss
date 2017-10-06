@@ -1,0 +1,23 @@
+/* Form. */
+form {
+  .form-actions button {
+    color: $body;
+    &:hover {
+      border-color: $green;
+      color: $pure-white;
+    }
+  }
+  .links {
+    display: none;
+  }
+  .input-group-addon:first-child {
+    border-radius: 25px 0 0 25px;
+  }
+}
+.form-control {
+  height: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 25px;
+  font-family: $roboto;
+}

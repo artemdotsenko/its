@@ -1,0 +1,93 @@
+<?php
+
+/**
+ * @file
+ * ITS Contact module.
+ */
+
+include_once 'its_contact.features.inc';
+
+define('ITS_CONTACT_BACK_CALL_UUID', 'b68ac92d-15fa-4f70-9d21-b31734143169');
+define('ITS_CONTACT_SIGN_UP_UUID', 'f2d11b62-3e48-4729-a8cb-9455f8c57131');
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function its_contact_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function its_contact_block_info() {
+  $blocks['its_contact_back_call'] = array(
+    'info' => t('Back Call'),
+  );
+  $blocks['its_contact_sign_up'] = array(
+    'info' => t('Sign Up'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function its_contact_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'its_contact_back_call':
+      $block['subject'] = '';
+      $block['content'] = '<div class="dropdown">';
+      $block['content'] .= theme('html_tag', array(
+        'element' => array(
+          '#tag' => 'button',
+          '#value' => '<span class="hidden-xs">' . t('Request a call') . '</span><span class="visible-xs glyphicon glyphicon-question-sign"></span>',
+          '#attributes' => array(
+            'class' => array('btn', 'dropdown-toggle'),
+            'type' => 'button',
+            'id' => 'backCall',
+            'data-toggle' => 'dropdown',
+            'aria-haspopup' => 'true',
+            'aria-expanded' => 'false',
+          ),
+        ),
+      ));
+      $block['content'] .= '<ul class="dropdown-menu" aria-labelledby="backCall"><li>';
+      $block['content'] .= '<h4 class="visible-xs">' . t('Request a call') . '</h4>';
+      $id = entity_get_id_by_uuid('node', array(ITS_CONTACT_BACK_CALL_UUID));
+      $id = reset($id);
+      $webform = module_invoke('webform', 'block_view', 'client-block-' . $id);
+      $block['content'] .= $webform['content'];
+      $block['content'] .= '</li></ul>';
+      $block['content'] .= '</div>';
+      break;
+
+    case 'its_contact_sign_up':
+      $block['subject'] = '';
+      $id = entity_get_id_by_uuid('node', array(ITS_CONTACT_SIGN_UP_UUID));
+      $id = reset($id);
+      $webform = module_invoke('webform', 'block_view', 'client-block-' . $id);
+      $block['content'] = $webform['content'];
+      break;
+
+  }
+  return $block;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function its_contact_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, 'webform_client_form_') === 0) {
+    switch ($form['#node']->uuid) {
+      case ITS_CONTACT_SIGN_UP_UUID:
+        $form['actions']['submit']['#prefix'] = '<div class="more-link-wings">';
+        $form['actions']['submit']['#suffix'] = '</div>';
+        break;
+    }
+  }
+}

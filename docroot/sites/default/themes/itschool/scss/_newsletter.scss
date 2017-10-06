@@ -1,0 +1,48 @@
+/* Newsletter. */
+.pane-its-contact-its-contact-sign-up {
+  text-align: center;
+  padding-bottom: 52px;
+
+  h2 {
+    @extend .pane-title;
+    letter-spacing: 4px;
+  }
+
+  fieldset {
+    border: none;
+    max-width: 640px;
+    margin: 60px auto 0;
+    background: transparent;
+    box-shadow: none;
+    .panel-body {
+      padding: 0;
+    }
+    .form-item {
+      @extend .col-md-6;
+    }
+  }
+
+  .more-link-wings {
+    margin-top: 40px;
+    button {
+      font-size: $big-font-size;
+    }
+  }
+  .more-link-wings:after,
+  .more-link-wings:before {
+    width: calc(50% - 81px);
+    .i18n-ru &,
+    .i18n-ua & {
+      width: calc(50% - 75px);
+    }
+  }
+  .form-actions button {
+    border-color: $silver;
+    &:hover {
+      border-color: $green;
+    }
+  }
+  .links {
+    display: none;
+  }
+}

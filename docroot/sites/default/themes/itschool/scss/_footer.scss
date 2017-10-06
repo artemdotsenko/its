@@ -1,0 +1,80 @@
+/* Footer. */
+.footer {
+  padding-bottom: 0;
+  padding-top: 37px;
+  margin-top: 0;
+  background: image-url('footer.png') center 27px repeat-x transparent;
+  .logo {
+    display: inline-block;
+    img {
+      width: 190px;
+      height: auto;
+      margin: 0 0 8px 0;
+    }
+    .logo-notes {
+      color: $body;
+      font-size: 15px;
+      margin-left: 10px;
+      letter-spacing: 2px;
+      .i18n-ru &,
+      .i18n-ua & {
+        letter-spacing: 4px;
+      }
+    }
+  }
+  h2 {
+    font-size: $big-font-size;
+    font-family: $roboto;
+    font-weight: bold;
+    margin-bottom: 34px;
+    margin-top: 32px;
+  }
+  .up-footer {
+    margin-bottom: 100px;
+  }
+  .sub-footer {
+    background: $light-green;
+    color: $white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: $roboto;
+    font-size: $big-font-size;
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .view-display-id-block_classes_left {
+    > .view-content,
+    > .attachment {
+      @extend .col-md-6;
+      ul {
+        padding-left: 0;
+        list-style-image: image-url('double-arrow.png');
+        li {
+          margin-bottom: 14px;
+          font-family: $roboto;
+          font-size: $normal-font-size;
+          padding-left: 3px;
+        }
+      }
+      a {
+        color: $grey;
+        &:hover {
+          @include opacity(0.8);
+        }
+      }
+    }
+  }
+
+  .courses {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  .about {
+    padding-left: 15px;
+    p {
+      line-height: 23px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<?php
+/**
+ * @file
+ * Code for the ITS Languages feature.
+ */
+
+include_once 'its_languages.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function its_languages_block_info() {
+  $blocks['language_selector'] = array(
+    'info' => t('Language Selector'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function its_languages_block_view($delta = '') {
+  global $language;
+  $block = array();
+
+  switch ($delta) {
+    case 'language_selector':
+      $langs = language_list();
+      $links = array();
+      foreach ($langs as $lang) {
+        if ($lang->enabled) {
+          $class = '';
+          if ($lang->language == $language->language) {
+            $class = ' class="active"';
+          }
+          $links[] = "<a href='/{$lang->prefix}'{$class}>{$lang->language}</a>";
+        }
+      }
+
+      $block['subject'] = '';
+      $block['content'] = '<div class="language-switch">';
+      $block['content'] .= '<span class="lang-icon"></span>';
+      $block['content'] .= implode('<span class="delimeter">/</span>', $links);
+      $block['content'] .= '</div>';
+      break;
+
+  }
+  return $block;
+}

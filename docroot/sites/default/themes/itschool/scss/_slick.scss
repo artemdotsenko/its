@@ -1,0 +1,26 @@
+/* Slick Slider. */
+.slick-slide img {
+  margin: 0 auto;
+}
+.slick-next,
+.slick-prev {
+  font-size: 30px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  border: none;
+  z-index: 9999;
+  &.slick-disabled {
+    display: none !important;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.slick-next {
+  right: -15px;
+}
+.slick-prev {
+  left: -15px;
+}

@@ -1,0 +1,30 @@
+/* Teachers. */
+.view-display-id-panel_pane_subject_theachers {
+  .slick-arrow {
+    font-size: $normal-font-size;
+    border: 1px solid $body;
+    padding: 5px;
+    border-radius: 15px;
+    top: 83px;
+    margin-top: 0;
+  }
+  .slick-prev {
+    left: 15px;
+  }
+  .slick-next {
+    right: 15px;
+  }
+  .views-field-field-people-image {
+    margin-bottom: 20px;
+  }
+  .views-field-field-people-full-name,
+  .views-field-field-people-full-name a {
+    color: $body;
+    font-weight: bold;
+    font-size: $big-font-size;
+  }
+  .views-field-field-people-position {
+    margin-bottom: 30px;
+    font-size: $sub-font-size;
+  }
+}

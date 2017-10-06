@@ -1,0 +1,25 @@
+/* Partners. */
+.pane-its-partners-panel-partners-slider {
+  @extend .container;
+
+  .view-content {
+    position: relative;
+    width: 81.8%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    .views-row a {
+      @media #{$tablet} {
+        img {
+          @include opacity(0.7);
+        }
+        &:hover img {
+          @include opacity(1);
+        }
+      }
+    }
+    .slick-slide {
+      padding: 0 8px;
+    }
+  }
+}

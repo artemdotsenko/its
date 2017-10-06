@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * ITS Social module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function its_social_theme($existing, $type, $theme, $path) {
+  return array(
+    'its_social_links' => array(
+      'variables' => array(
+        'links' => array(),
+      ),
+      'file' => 'its_social.theme.inc',
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function its_social_block_info() {
+  $blocks['its_social_links'] = array(
+    'info' => t('ITS Social Links'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function its_social_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'its_social_links':
+      $block['subject'] = '';
+      $links = array(
+        'facebook' => array(
+          'text' => t('Facebook'),
+          'path' => 'https://www.facebook.com/ischoolLITSmykolaiv/',
+        ),
+        // 'instagram' => array(
+        //   'text' => t('Instagram'),
+        //   'path' => 'https://instagram.com',
+        // ),
+        // 'youtube' => array(
+        //   'text' => t('Youtube'),
+        //   'path' => 'https://youtube.com',
+        // ),
+        // 'googleplus' => array(
+        //   'text' => t('Google+'),
+        //   'path' => 'https://googleplus.com',
+        // ),
+      );
+      $block['content'] = theme('its_social_links', array('links' => $links));
+      break;
+
+  }
+  return $block;
+}

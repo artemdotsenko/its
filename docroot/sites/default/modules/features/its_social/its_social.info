@@ -1,0 +1,4 @@
+name = ITS Social
+description = ITS Social blocks and settings
+core = 7.x
+package = ITS

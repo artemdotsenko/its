@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * ITS Bootstrap Layout.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function its_bootstrap_layout_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}

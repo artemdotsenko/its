@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Reviews feature.
+ */
+
+include_once 'its_reviews.features.inc';

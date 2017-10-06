@@ -1,0 +1,10 @@
+/* Media query variables. */
+
+$phone:         "screen and (max-width: #{$screen-xs})";                                // <= 480
+$mobile:        "screen and (max-width: #{$screen-xs-max})";                            // <  768
+$tablet:        "screen and (min-width: #{$screen-sm-min})";                            // >= 768
+$tablet-mobile: "screen and (max-width: #{$screen-sm-max})";                            // <  992
+$tablet-only:   "(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";     // >= 768 -- < 992
+$normal:        "screen and (min-width: #{$screen-md-min})";                            // >= 992
+$normal-only:   "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";     // >= 992 -- < 1200
+$wide:          "screen and (min-width: #{$screen-lg-min})";                            // >= 1200

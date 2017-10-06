@@ -1,0 +1,49 @@
+/* Social. */
+.pane-its-social-its-social-links {
+  text-align: center;
+  &.panel-pane {
+    padding-top: 0;
+  }
+  ul.its-social-links-list li {
+    font-size: 15px;
+    padding: 5px 7px;
+    margin: 0 4px;
+    a {
+      line-height: 26px;
+    }
+  }
+}
+
+ul.its-social-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    font-size: 19px;
+    border: 1px solid $green;
+    border-radius: 30px;
+    padding: 9px 10px;
+    margin: 0 10px;
+    &:hover {
+      @include opacity(0.7);
+      cursor: pointer;
+    }
+    a {
+      color: $green;
+      display: block;
+      width: 20px;
+      height: 23px;
+      text-align: center;
+      line-height: 32px;
+      &:hover {
+        @include opacity(0.7);
+      }
+      &:focus,
+      &:active,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+}

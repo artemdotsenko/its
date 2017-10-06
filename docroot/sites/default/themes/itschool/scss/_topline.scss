@@ -1,0 +1,148 @@
+/* Topline. */
+#topline {
+  background: $pure-white;
+  height: 84px;
+  border-bottom: 1px solid $mercurysolid;
+  .topline-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  section {
+    float: left;
+    border-left: 1px solid $mercurysolid;
+    height: 84px;
+    padding-left: 39px;
+    padding-right: 39px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: $roboto;
+    @media #{$mobile} {
+      padding-left: 15px;
+    }
+    a {
+      color: $body;
+    }
+  }
+
+  #block-its-cities-city-selector {
+    .city-dropdown {
+      position: relative;
+    }
+    .dropdown-toggle {
+      font-weight: 500;
+      .glyphicon-map-marker {
+        margin-right: 15px;
+      }
+      .glyphicon-chevron-down {
+        margin-left: 14px;
+      }
+    }
+  }
+  #block-its-languages-language-selector {
+    .lang-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: image-url('lang-icon.png') 0 5px no-repeat transparent;
+      margin-right: 12px;
+    }
+    .delimeter {
+      margin: 0 7px;
+    }
+    .language-switch a {
+      text-transform: uppercase;
+      &.active {
+        color: $green;
+      }
+    }
+  }
+  #block-views-its-phones-block-phones-list {
+    padding-left: 32px;
+    padding-right: 32px;
+    button.dropdown-toggle {
+      border: none;
+      background: none;
+      font-size: $big-font-size;
+      padding: 0;
+    }
+    .chevron-down {
+      margin-left: 15px;
+      font-size: $sub-font-size;
+    }
+    .phone-alt {
+      margin-right: 14px;
+      font-size: $sub-font-size;
+    }
+    .dropdown-menu {
+      width: 220px;
+      border: none;
+      padding: 10px;
+    }
+  }
+  #block-its-social-its-social-links {
+    padding-left: 28px;
+    padding-right: 28px;
+    ul.its-social-links-list li {
+      margin: 0 3px;
+      padding: 0;
+      font-size: $big-font-size;
+      border-color: $body;
+      &:hover {
+        border-color: $green;
+        a {
+          color: $green;
+        }
+      }
+      a {
+        width: 28px;
+        height: 28px;
+        color: $body;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+    @media screen and (max-width: 520px) {
+      display: none;
+    }
+  }
+  #block-its-contact-its-contact-back-call {
+    border: none;
+    float: right;
+    padding: 0;
+    button.dropdown-toggle {
+      background: none;
+      color: $body;
+      font-size: $big-font-size;
+      .glyphicon {
+        color: $green;
+        font-size: 38px;
+      }
+      &:hover {
+        background-color: $green;
+        color: $pure-white;
+        .glyphicon {
+          @include opacity(0.7);
+        }
+      }
+    }
+    .dropdown-menu {
+      min-width: 300px;
+      left: -140px;
+      padding: 15px;
+    }
+    @media #{$mobile} {
+      button.dropdown-toggle {
+        border-style: none;
+        padding: 6px;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      .dropdown-menu {
+        left: -300px;
+      }
+    }
+  }
+}

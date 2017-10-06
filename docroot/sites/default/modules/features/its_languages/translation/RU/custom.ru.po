@@ -1,0 +1,74 @@
+# $Id$
+#
+# Russian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  its_bootstrap_layout/its_bootstrap_layout.info: n/a
+#  its_bootstrap_layout/plugins/layouts/class/class.inc: n/a
+#  its_bootstrap_layout/plugins/layouts/subject/subject.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-08-14 08:12+0300\n"
+"PO-Revision-Date: 2017-08-14 08:12+0300\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Russian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: its_bootstrap_layout/its_bootstrap_layout.info:0
+msgid "ITS Bootstrap Layout"
+msgstr ""
+
+#: its_bootstrap_layout/its_bootstrap_layout.info:0
+msgid "Bootstrap Layouts for responsive theme."
+msgstr ""
+
+#: its_bootstrap_layout/its_bootstrap_layout.info:0 its_bootstrap_layout/plugins/layouts/class/class.inc:14 its_bootstrap_layout/plugins/layouts/subject/subject.inc:14
+msgid "ITS"
+msgstr ""
+
+#: its_bootstrap_layout/plugins/layouts/class/class.inc:12
+msgid "Class"
+msgstr "Курс"
+
+#: its_bootstrap_layout/plugins/layouts/class/class.inc:18 its_bootstrap_layout/plugins/layouts/subject/subject.inc:18
+msgid "Top Content"
+msgstr ""
+
+#: its_bootstrap_layout/plugins/layouts/class/class.inc:19
+msgid "Left"
+msgstr "Лево"
+
+#: its_bootstrap_layout/plugins/layouts/class/class.inc:20
+msgid "Right"
+msgstr "Право"
+
+#: its_bootstrap_layout/plugins/layouts/class/class.inc:21 its_bootstrap_layout/plugins/layouts/subject/subject.inc:23
+msgid "Footer block"
+msgstr ""
+
+#: its_bootstrap_layout/plugins/layouts/subject/subject.inc:12
+msgid "Subject"
+msgstr "Предмет"
+
+#: its_bootstrap_layout/plugins/layouts/subject/subject.inc:19
+msgid "Title"
+msgstr "Название"
+
+#: its_bootstrap_layout/plugins/layouts/subject/subject.inc:20
+msgid "Date"
+msgstr "Дата"
+
+#: its_bootstrap_layout/plugins/layouts/subject/subject.inc:21
+msgid "Content"
+msgstr ""
+
+#: its_bootstrap_layout/plugins/layouts/subject/subject.inc:22
+msgid "Sidebar"
+msgstr ""
+

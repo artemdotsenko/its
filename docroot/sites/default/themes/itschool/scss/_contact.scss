@@ -1,0 +1,27 @@
+/* Contact */
+.page-contact {
+  .right-inner {
+    @media #{$tablet} {
+      padding-left: 80px;
+    }
+    .google_map_field_display {
+      height: 400px;
+      width: 100%;
+    }
+  }
+  .field-name-field-contact-address {
+    margin-bottom: 40px;
+  }
+  .field-name-field-contact-phones {
+    margin-bottom: 40px;
+    .field-item {
+      margin-bottom: 10px;
+    }
+  }
+  .left-inner .pane-its-social-its-social-links {
+    text-align: left;
+  }
+  #block-system-main {
+    margin-bottom: 40px;
+  }
+}

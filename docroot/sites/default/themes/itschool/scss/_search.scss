@@ -1,0 +1,45 @@
+/* Search */
+.search-form-wrapper {
+  width: 200px;
+  float: right;
+
+  input.form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    color: $pure-white;
+    border-bottom: 1px solid $pure-white;
+    height: 24px;
+    padding: 0;
+    @include input-placeholder {
+      color: $pure-white;
+    }
+  }
+  button {
+    background: transparent;
+    padding: 0;
+    height: 20px;
+    font-size: $huge-font-size;
+    border: none;
+    border-radius: 0;
+  }
+  .form-group {
+    display: none;
+  }
+}
+
+.page-search {
+  h1.page-header {
+    margin-top: 40px;
+    border: none;
+  }
+  .page-header,
+  .messages,
+  .region-content {
+    @extend .container;
+  }
+  .search-info {
+    display: none;
+  }
+}

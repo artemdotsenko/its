@@ -1,0 +1,6 @@
+name = ITS Bootstrap Layout
+description = Bootstrap Layouts for responsive theme.
+core = 7.x
+package = ITS
+version = 7.x-1.0
+project = its_bootstrap_layout

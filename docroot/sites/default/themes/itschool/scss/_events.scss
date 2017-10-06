@@ -1,0 +1,109 @@
+/* Events. */
+.pane-its-events-panel-upcomnig-events {
+  background-color: $pure-white;
+  text-align: center;
+  p {
+    max-width: 778px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .pane-title,
+  .view-header {
+    max-width: 778px;
+    text-align: center;
+    margin: 0 auto 30px;
+    letter-spacing: 4px;
+  }
+  .view-header {
+    margin-bottom: 70px;
+  }
+  .view-content {
+    background-color: $alabaster;
+    min-height: 369px;
+    margin-top: 60px;
+    @extend .clearfix;
+    .row {
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+  }
+  .view-footer {
+    clear: both;
+  }
+
+  .views-row {
+    max-width: 430px;
+    margin: 0 auto;
+    @media #{$mobile} {
+      margin-bottom: 20px;
+    }
+  }
+
+  .event-link-wrapper {
+    display: block;
+    height: 400px;
+    text-align: center;
+    color: $white;
+    padding: 0 30px;
+    position: relative;
+    span {
+      display: block;
+    }
+    .event-date {
+      padding-top: 87px;
+      padding-bottom: 30px;
+      font-family: $roboto;
+      font-size: 18px;
+    }
+    .event-link {
+      @extend .btn;
+      padding: 8px 35px;
+      font-family: $roboto;
+      font-size: 20px;
+    }
+    .event-title {
+      font-weight: bold;
+      font-size: 24px;
+      padding-bottom: 22px;
+    }
+    .event-body {
+      font-size: $normal-font-size;
+      padding-bottom: 28px;
+      p {
+        font-size: $normal-font-size;
+      }
+    }
+    .event-triangle-top,
+    .event-triangle-bottom {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      margin-left: -25px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 25px 0 25px;
+      border-color: $black transparent transparent transparent;
+      display: none;
+    }
+    .event-triangle-top {
+      top: 0;
+      bottom: auto;
+      border-color: $alabaster transparent transparent transparent;
+    }
+    &:hover {
+      background: $black !important;
+      .event-triangle-top,
+      .event-triangle-bottom {
+        display: block;
+      }
+      .event-link {
+        @extend .btn:hover;
+      }
+    }
+  }
+  .more-link-wrapper {
+    margin-top: 44px;
+  }
+}

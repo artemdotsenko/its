@@ -1,0 +1,35 @@
+/* Advantages. */
+.view-display-id-panel_pane_advantages {
+  .views-field-field-adv-icon {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    img {
+      height: auto;
+      width: auto;
+      max-height: 40px;
+    }
+  }
+  .views-row {
+    margin-bottom: 20px;
+  }
+  .views-field-description {
+    text-align: left;
+    padding-right: 30px;
+  }
+}
+
+.view-display-id-panel_pane_adv_num {
+  padding: 0 80px;
+  .views-field-name {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    color: $grey;
+    margin-bottom: 30px;
+  }
+  .views-field-description {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 30px
+  }
+}

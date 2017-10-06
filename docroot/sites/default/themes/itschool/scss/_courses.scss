@@ -1,0 +1,242 @@
+/* Courses. */
+
+.view-display-id-panel_class_list {
+  .views-row > a {
+    display: block;
+    width: 100%;
+    background: $light-grey;
+    border-radius: 12px;
+    color: $white;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    @media #{$tablet} {
+      max-width: 272px;
+      display: inline-block;
+      width: auto;
+    }
+    &:hover {
+      text-decoration: none;
+      background: $light-green;
+    }
+    &.position-left {
+      .icon {
+        float: left;
+        margin: -2px 8px 0 0;
+      }
+    }
+    &.position-right {
+      .icon {
+        float: right;
+        margin: -2px 0 0 8px;
+      }
+      @media #{$phone} {
+        .icon {
+          float: left;
+          margin-right: 15px;
+          margin-left: 0;
+        }
+      }
+    }
+    .title {
+      line-height: 20px;
+      font-family: $roboto;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .short-description-wrapper {
+      font-size: $sub-font-size;
+    }
+  }
+}
+
+.view-display-id-panel_all_courses {
+  margin-bottom: 50px;
+  h1 {
+    margin: 77px 0 50px;
+    font-size: 33px;
+    font-family: $pts;
+    font-weight: normal;
+  }
+  .view-content .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .views-row > a {
+    display: block;
+    width: 100%;
+    background: $light-grey;
+    border-radius: 12px;
+    color: $white;
+    padding: 26px 15px 15px 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    height: 190px;
+    img {
+      margin: 0 auto 20px;
+    }
+    span {
+      display: block;
+      font-family: $roboto;
+      font-size: 14px;
+    }
+    .title {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      font-family: $roboto;
+      font-size: 19px;
+    }
+    &:hover {
+      text-decoration: none;
+      background: $light-green;
+    }
+  }
+}
+
+.view-display-id-panel_pane_full_package {
+  position: relative;
+
+  .nav > li > a {
+    padding: 10px 34px;
+  }
+  .nav-pills {
+    padding: 0 32px;
+    .right {
+      float: right;
+    }
+    a span {
+      margin-right: 15px;
+    }
+    > li > a {
+      color: $body;
+      background-color: $pure-white;
+      border-radius: 20px;
+      border: 1px solid $silver;
+    }
+  }
+  .nav-pills > li.active > a,
+  .nav-pills > li.active > a:hover,
+  .nav-pills > li > a:hover,
+  .nav-pills > li.active > a:focus {
+    background-color: $light-grey;
+    border-color: $light-grey;
+    color: $white;
+  }
+  .border-wrapper.border-top {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+  }
+  .border-wrapper {
+    div {
+      height: 40px;
+    }
+    &.border-top div {
+      border-top: 1px solid $silver;
+      &.border-middle {
+        border: none;
+      }
+    }
+    .border-left {
+      border-left: 1px solid $silver;
+    }
+    .border-right {
+      border-right: 1px solid $silver;
+    }
+  }
+
+  .tab-content {
+    margin-top: 35px;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 20px;
+    position: relative;
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background-color: $silver;
+      position: absolute;
+      bottom: 0;
+    }
+    &:after {
+      right: 0;
+    }
+    &:before {
+      left: 0;
+    }
+  }
+  .table {
+    margin-bottom: 10px;
+  }
+  .views-field-title {
+    font-weight: bold;
+  }
+  .custom-row {
+    td span {
+      margin-right: 10px;
+    }
+    .left,
+    .right {
+      padding: 0;
+      div {
+        padding: 10px 15px;
+        line-height: 39px;
+      }
+    }
+    .left div {
+      padding-right:0;
+      border-radius: 30px 0 0 30px;
+    }
+    .right div {
+      padding-left: 0;
+      border-radius: 0 30px 30px 0;
+    }
+    .btn {
+      padding: 7px 30px;
+      background-color: $light-grey;
+      border-color: $pure-white;
+    }
+    &:hover {
+      color: $pure-white;
+      .left, .right {
+        background-color: transparent;
+      }
+      .left div, .right div {
+        background-color: $green;
+      }
+      .middle {
+        background-color: $green;
+      }
+      .btn {
+        border-color: $green;
+      }
+    }
+  }
+}
+
+.start-date-wrapper {
+  background: $light-grey;
+  border-radius: 36px;
+  color: $white;
+  padding: 16px 26px;
+  h4 {
+    color: $pure-white;
+    margin: 0;
+  }
+  span.glyphicon {
+    font-size: 30px;
+  }
+}
+
+.panel-page-subject {
+  .one-column-container {
+    margin-bottom: 20px;
+  }
+  .main-content {
+    border: 1px solid $silver;
+    padding: 15px;
+    margin: 15px 0;
+  }
+}

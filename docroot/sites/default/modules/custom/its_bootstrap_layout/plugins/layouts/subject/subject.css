@@ -1,0 +1,23 @@
+/**
+ * @file
+ * About page panel layout css,
+ * @todo - add admin styles here, if needed.
+*/
+
+#panels-panel-context-edit-content .row {
+  clear: both;
+}
+
+#panels-panel-context-edit-content .col-sm-9 {
+  float: left;
+  width: 75%;
+}
+
+#panels-panel-context-edit-content .col-sm-3 {
+  float: left;
+  width: 25%;
+}
+
+#panels-panel-context-edit-content .text-center {
+  text-align: center;
+}

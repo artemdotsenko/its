@@ -1,0 +1,153 @@
+# $Id$
+#
+# Russian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  itschool.info: n/a
+#  templates/system/page.tpl.php: n/a
+#  templates/views/its_articles/views-view-field--its-articles--panel-promoted-article--path.tpl.php: n/a
+#  templates/views/its_subject/views-view-field--its-subject--panel-pane-full-package--path.tpl.php: n/a
+#  templates/views/its_class/views-view--its-class--block-classes-left.tpl.php: n/a
+#  templates/views/its_class/views-view--its-class--panel-all-courses.tpl.php: n/a
+#  templates/views/its_events/views-view--its-events--panel-upcomnig-events.tpl.php: n/a
+#  templates/views/its_reviews/views-view--its-reviews--panel-reviews.tpl.php: n/a
+#  templates/views/its_subject/views-bootstrap-table-plugin-style--its-subject--panel-pane-full-package.tpl.php: n/a
+#  templates/views/its_subject/views-view--its-subject--panel-pane-full-package.tpl.php: n/a
+#  templates/views/its_subject/views-view-field--its-subject--panel-pane-course-duration--field-subject-duration.tpl.php: n/a
+#  templates/views/its_subject/views-view-field--its-subject--panel-pane-subject-start--field-subject-start-date.tpl.php: n/a
+#  templates/views/its_teacher/views-view--its-teacher--panel-pane-subject-theachers.tpl.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-08-14 08:23+0300\n"
+"PO-Revision-Date: 2017-08-14 08:23+0300\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Russian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: itschool.info:0
+msgid "IT School"
+msgstr ""
+
+#: itschool.info:0
+msgid "Uses the Bootstrap Framework Sass source files and must be compiled (not for beginners)."
+msgstr ""
+
+#: itschool.info:0
+msgid "Top Line"
+msgstr ""
+
+#: itschool.info:0
+msgid "Top Bar"
+msgstr ""
+
+#: itschool.info:0
+msgid "Highlighted"
+msgstr ""
+
+#: itschool.info:0
+msgid "Content"
+msgstr ""
+
+#: itschool.info:0
+msgid "Footer"
+msgstr ""
+
+#: templates/system/page.tpl.php:98
+msgid "Toggle navigation"
+msgstr ""
+
+#: templates/system/page.tpl.php:165
+msgid "IT school of the future"
+msgstr "IT школа будущего"
+
+#: templates/system/page.tpl.php:173
+msgid "About us"
+msgstr "О нас"
+
+#: templates/system/page.tpl.php:174
+msgid "[about_us_description]"
+msgstr ""
+
+#: templates/system/page.tpl.php:182
+msgid "© <strong>iSchool</strong> !year | All rights reserved"
+msgstr "© <strong>iSchool</strong> !year | Все права защищены"
+
+#: templates/views/its_articles/views-view-field--its-articles--panel-promoted-article--path.tpl.php:25 templates/views/its_subject/views-view-field--its-subject--panel-pane-full-package--path.tpl.php:25
+msgid "Details"
+msgstr "Подробнее"
+
+#: templates/views/its_class/views-view--its-class--block-classes-left.tpl.php:32
+msgid "Courses"
+msgstr "Курсы"
+
+#: templates/views/its_class/views-view--its-class--panel-all-courses.tpl.php:34
+msgid "Our courses"
+msgstr "Наши курсы"
+
+#: templates/views/its_events/views-view--its-events--panel-upcomnig-events.tpl.php:34
+msgid "Upcoming events"
+msgstr "Предстоящие события"
+
+#: templates/views/its_events/views-view--its-events--panel-upcomnig-events.tpl.php:36
+msgid "[upcoming_events_description]"
+msgstr ""
+
+#: templates/views/its_events/views-view--its-events--panel-upcomnig-events.tpl.php:61
+msgid "All events"
+msgstr "Все события"
+
+#: templates/views/its_reviews/views-view--its-reviews--panel-reviews.tpl.php:31
+msgid "They say about us"
+msgstr "О нас говорят"
+
+#: templates/views/its_subject/views-bootstrap-table-plugin-style--its-subject--panel-pane-full-package.tpl.php:52
+msgid "One time payment"
+msgstr "Единоразовая плата"
+
+#: templates/views/its_subject/views-bootstrap-table-plugin-style--its-subject--panel-pane-full-package.tpl.php:63
+msgid "Not enough money"
+msgstr "Не хватает суммы"
+
+#: templates/views/its_subject/views-bootstrap-table-plugin-style--its-subject--panel-pane-full-package.tpl.php:64
+msgid "Not enough money solution"
+msgstr ""
+"Мы не допустим, чтобы это стало препятствием для вашего будущего. Вы можете "
+"оплачивать курс в рассрочку, четырмя равными платежами."
+
+#: templates/views/its_subject/views-bootstrap-table-plugin-style--its-subject--panel-pane-full-package.tpl.php:71
+msgid "Pay in parts"
+msgstr "Оплата частями"
+
+#: templates/views/its_subject/views-view--its-subject--panel-pane-full-package.tpl.php:46
+msgid "Full package"
+msgstr "Полный пакет"
+
+#: templates/views/its_subject/views-view--its-subject--panel-pane-full-package.tpl.php:49
+msgid "Select course"
+msgstr "Подобрать курс"
+
+#: templates/views/its_subject/views-view-field--its-subject--panel-pane-course-duration--field-subject-duration.tpl.php:25
+msgid "Course duration:"
+msgstr "Продолжительность курса:"
+
+#: templates/views/its_subject/views-view-field--its-subject--panel-pane-subject-start--field-subject-start-date.tpl.php:30
+msgid "Nearest course"
+msgstr "Ближайщий курс"
+
+#: templates/views/its_subject/views-view-field--its-subject--panel-pane-subject-start--field-subject-start-date.tpl.php:31
+msgid "starts"
+msgstr "стартует"
+
+#: templates/views/its_teacher/views-view--its-teacher--panel-pane-subject-theachers.tpl.php:32
+msgid "Subject Teachers"
+msgstr "Преподователи курса"
+
+#: templates/views/its_subject/views-view-field--its-subject--field-subject-duration.tpl.php:25 templates/views/its_subject/views-view-field--its-subject--panel-pane-course-duration--field-subject-duration.tpl.php:25
+msgid "!duration h."
+msgstr "!duration ч."

@@ -1,0 +1,175 @@
+/* Global styles. */
+@media #{$tablet} {
+  .container {
+    width: 100%;
+  }
+}
+
+body {
+  color: $body;
+  font-size: $normal-font-size;
+  font-family: $robotoc;
+  &.toolbar-drawer {
+    padding-top: 30px !important;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.col-sm-12 {
+  padding: 0;
+}
+
+h2 {
+  color: $panel-title;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+.btn-wrapper a,
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  text-transform: lowercase;
+  color: $white;
+  border: 2px solid $green;
+  border-radius: 24px;
+  &:hover {
+    color: $pure-white;
+    background-color: $green;
+  }
+}
+
+.btn-sm {
+  color: $body;
+  padding: 1px 7px;
+  border-radius: 6px;
+}
+
+.more-link-wings {
+  margin: 40px auto 0;
+  width: 66.6%;
+  position: relative;
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    width: calc(50% - 86px);
+    min-width: 10px;
+    border-bottom: 2px solid $silver;
+    top: calc(50% - 1px);
+  }
+  &:before {
+    left: 0;
+    border-radius: 2px 0 0 2px;
+  }
+  &:after {
+    right: 0;
+    border-radius: 0 2px 2px 0;
+  }
+  a {
+    @extend .btn;
+    color: $silver;
+    border-color: $silver;
+    text-transform: lowercase;
+    font-family: $roboto;
+    font-size: 18px;
+    display: inline-block;
+    min-width: 150px;
+    padding: 8px 32px;
+    &:hover {
+      border-color: $green;
+    }
+  }
+}
+
+.panel-separator {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.panel-col-bottom .panel-pane {
+  padding-top: 65px;
+  padding-bottom: 70px;
+}
+h2.pane-title {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.not-front {
+  #navbar {
+    background: image-url('footer.png') 0 0 repeat-x transparent;
+  }
+  #block-system-main .panel-panel {
+    margin-bottom: 20px;
+  }
+  .highlighted {
+    padding: 10px 0;
+    color: $white;
+    background-color: $green;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  color: $black;
+  font-weight: normal;
+  font-family: $pts;
+}
+
+.table {
+  > thead > tr > th,
+  > thead > tr > td,
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    border: none;
+    padding: 10px 15px;
+    vertical-align: middle;
+  }
+  > thead > tr.odd > th,
+  > thead > tr.odd > td,
+  > tbody > tr.odd > th,
+  > tbody > tr.odd > td,
+  > tfoot > tr.odd > th,
+  > tfoot > tr.odd > td {
+    background-color: $alabaster;
+  }
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.no-right-padding {
+  padding-right: 0 !important;
+}
+
+.no-gutters {
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.proj {
+  display: inline-flex;
+  float: none;
+  margin: 0 -2px;
+}
+
+.panel-3col-stacked .panel-col-last .inside,
+.panel-3col-stacked .panel-col-first .inside {
+  margin: 0;
+}
+
+.kv-city .mk-visible,
+.mk-city .kv-visible {
+  display: none !important;
+}

@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @file
+ * Update hooks for its_master module.
+ */
+
+/**
+ * Implements hook_core_enable().
+ */
+function its_master_enable() {
+  theme_enable(array('itschool', 'seven'));
+  theme_disable(array('bartik'));
+
+  // Set admin theme.
+  variable_set('admin_theme', 'seven');
+  // Set default theme.
+  variable_set('theme_default', 'itschool');
+
+  // Remove blocks that we don't want on admin screens.
+  db_query('UPDATE {block} SET STATUS = 0 WHERE theme=\'seven\' AND STATUS = 1 AND delta <> \'main\'');
+
+  // Remove blocks that we don't want on admin screens.
+  db_query('UPDATE {block} SET STATUS = 0 WHERE theme=\'itschool\' AND STATUS = 1 AND delta <> \'main\'');
+
+  its_master_update_7001();
+  its_master_update_7002();
+  its_master_update_7003();
+}
+
+/**
+ * Uninstall unnecessary modules.
+ */
+function its_master_update_7001() {
+  $modules = array(
+    'color',
+    'comment',
+    'dashboard',
+    'dblog',
+    'help',
+    'overlay',
+    'shortcut',
+    'update',
+  );
+
+  // Avoid modules which not exists.
+  $modules = array_filter($modules, 'module_exists');
+
+  // Uninstall modules.
+  module_disable($modules, TRUE);
+  drupal_uninstall_modules($modules, TRUE);
+}
+
+/**
+ * Install necessary modules.
+ */
+function its_master_update_7002() {
+  $modules = array(
+    'its_article',
+    'its_class',
+    'its_contact',
+    'its_contact',
+    'its_events',
+    'its_menu',
+    'its_mk_en',
+    'its_mk_ru',
+    'its_mk_ua',
+    'its_pages',
+    'its_partners',
+    'its_reviews',
+    'its_social',
+  );
+
+  module_enable($modules);
+}
+
+/**
+ * Disable default language.
+ */
+function its_master_update_7003() {
+  db_update('languages')
+    ->fields(array('enabled' => 0))
+    ->condition('language', 'en')
+    ->execute();
+}
+
+/**
+ * Install necessary modules.
+ */
+function its_master_update_7004() {
+  $modules = array(
+    'commerce',
+    'commerce_price',
+    'commerce_product',
+    'commerce_ui',
+    'date_popup',
+    'date_views',
+    'entityreference',
+    'its_bootstrap_layout',
+    'panels_breadcrumbs',
+  );
+
+  module_enable($modules);
+}

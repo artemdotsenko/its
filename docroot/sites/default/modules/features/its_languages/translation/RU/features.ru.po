@@ -1,0 +1,403 @@
+# $Id$
+#
+# Russian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  its_article/its_article.features.field_instance.inc: n/a
+#  its_class/its_class.features.field_instance.inc: n/a
+#  its_events/its_events.features.field_instance.inc: n/a
+#  its_pages/its_pages.features.field_instance.inc: n/a
+#  its_reviews/its_reviews.features.field_instance.inc: n/a
+#  its_article/its_article.features.inc: n/a
+#  its_article/its_article.info: n/a
+#  its_class/its_class.features.inc: n/a
+#  its_contact/its_contact.features.inc: n/a
+#  its_events/its_events.features.inc: n/a
+#  its_pages/its_pages.features.inc: n/a
+#  its_partners/its_partners.features.inc: n/a
+#  its_cities/its_cities.info: n/a
+#  its_class/its_class.info: n/a
+#  its_contact/its_contact.info: n/a
+#  its_events/its_events.info: n/a
+#  its_languages/its_languages.info: n/a
+#  its_master/its_master.info: n/a
+#  its_menu/its_menu.info: n/a
+#  its_pages/its_pages.info: n/a
+#  its_partners/its_partners.info: n/a
+#  its_perm/its_perm.info: n/a
+#  its_reviews/its_reviews.info: n/a
+#  its_social/its_social.info: n/a
+#  its_cities/its_cities.module: n/a
+#  its_partners/its_partners.features.field_instance.inc: n/a
+#  its_class/its_class.field_group.inc: n/a
+#  its_master/its_master.module: n/a
+#  its_contact/its_contact.features.field_instance.inc: n/a
+#  its_contact/its_contact.module: n/a
+#  its_events/its_events.module: n/a
+#  its_languages/its_languages.module: n/a
+#  its_master/its_master.context.inc: n/a
+#  its_menu/its_menu.features.menu_custom.inc: n/a
+#  its_reviews/its_reviews.features.inc: n/a
+#  its_social/its_social.module: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-08-14 08:12+0300\n"
+"PO-Revision-Date: 2017-08-14 08:12+0300\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Russian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: its_article/its_article.features.field_instance.inc:119 its_class/its_class.features.field_instance.inc:577 its_events/its_events.features.field_instance.inc:172 its_pages/its_pages.features.field_instance.inc:59 its_reviews/its_reviews.features.field_instance.inc:174
+msgid "Body"
+msgstr "Тело"
+
+#: its_article/its_article.features.field_instance.inc:120 its_events/its_events.features.field_instance.inc:174 its_reviews/its_reviews.features.field_instance.inc:175
+msgid "Image"
+msgstr "Картинка"
+
+#: its_article/its_article.features.field_instance.inc:121
+msgid "Upload an image to go with this article."
+msgstr "Загрузите картинку к статье"
+
+#: its_article/its_article.features.inc:29 its_article/its_article.info:0
+msgid "Article"
+msgstr "Статья"
+
+#: its_article/its_article.features.inc:31
+msgid "Use <em>articles</em> for time-sensitive content like news, press releases or blog posts."
+msgstr ""
+
+#: its_article/its_article.info:0
+msgid "Article settings"
+msgstr ""
+
+#: its_article/its_article.info:0 its_cities/its_cities.info:0 its_class/its_class.info:0 its_contact/its_contact.info:0 its_events/its_events.info:0 its_languages/its_languages.info:0 its_master/its_master.info:0 its_menu/its_menu.info:0 its_pages/its_pages.info:0 its_partners/its_partners.info:0 its_perm/its_perm.info:0 its_reviews/its_reviews.info:0 its_social/its_social.info:0
+msgid "ITS"
+msgstr ""
+
+#: its_cities/its_cities.module:14
+msgid "City Selector"
+msgstr "Выбор города"
+
+#: its_cities/its_cities.info:0
+msgid "ITS Cities"
+msgstr ""
+
+#: its_class/its_class.features.field_instance.inc:579
+msgid "Duration"
+msgstr "Продолжительность"
+
+#: its_class/its_class.features.field_instance.inc:580
+msgid "Duration in hours."
+msgstr "Продолжительность в часах."
+
+#: its_class/its_class.features.field_instance.inc:581
+msgid "Frequency"
+msgstr "Частота"
+
+#: its_class/its_class.features.field_instance.inc:582
+msgid "Icon"
+msgstr "Иконка"
+
+#: its_class/its_class.features.field_instance.inc:583
+msgid "Position"
+msgstr "Положение"
+
+#: its_class/its_class.features.field_instance.inc:584
+msgid "Price"
+msgstr "Цена"
+
+#: its_class/its_class.features.field_instance.inc:585
+msgid "Short Description"
+msgstr "Краткое описание"
+
+#: its_class/its_class.features.field_instance.inc:586
+msgid "Start date"
+msgstr "Дата начала"
+
+#: its_class/its_class.features.field_instance.inc:587
+msgid "Teacher"
+msgstr "Преподаватель"
+
+#: its_class/its_class.features.field_instance.inc:588 its_partners/its_partners.features.field_instance.inc:163
+msgid "Weight"
+msgstr "Вес"
+
+#: its_class/its_class.features.field_instance.inc:589
+msgid "Will be displayed on front page class list. "
+msgstr "Будет отображено на главной странице и на списке курсов"
+
+#: its_class/its_class.features.field_instance.inc:590
+msgid "e.g.: 3 times per week"
+msgstr "например: 3 раза в неделю"
+
+#: its_class/its_class.features.inc:91
+msgid "Class composed from Subjects."
+msgstr "Курсы состоят из Предметов"
+
+#: its_class/its_class.features.inc:97
+msgid "Subject"
+msgstr "Предмет"
+
+#: its_class/its_class.field_group.inc:47
+msgid "Front Page"
+msgstr ""
+
+#: its_class/its_class.info:0 its_master/its_master.module:57
+msgid "Courses"
+msgstr "Курсы"
+
+#: its_class/its_class.info:0
+msgid "Courses settings."
+msgstr ""
+
+#: its_contact/its_contact.features.field_instance.inc:55
+msgid "Description"
+msgstr "Описание"
+
+#: its_contact/its_contact.features.inc:29
+msgid "Phones"
+msgstr "Телефоны"
+
+#: its_contact/its_contact.features.inc:33
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: its_contact/its_contact.features.inc:37
+msgid "Webform"
+msgstr ""
+
+#: its_contact/its_contact.features.inc:39
+msgid "Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users."
+msgstr ""
+
+#: its_contact/its_contact.module:18
+msgid "Back Call"
+msgstr "Обратный звонок"
+
+#: its_contact/its_contact.module:21
+msgid "Sign Up"
+msgstr "Подписаться"
+
+#: its_contact/its_contact.module:39;51
+msgid "Request a call"
+msgstr "Заказать звонок"
+
+#: its_contact/its_contact.info:0
+msgid "ITS Contacts"
+msgstr ""
+
+#: its_contact/its_contact.info:0
+msgid "ITS Contact info"
+msgstr ""
+
+#: its_events/its_events.features.field_instance.inc:173
+msgid "Date"
+msgstr "Дата"
+
+#: its_events/its_events.features.inc:56
+msgid "Event"
+msgstr "Событие"
+
+#: its_events/its_events.module:38
+msgid "Januaryth"
+msgstr "Января"
+
+#: its_events/its_events.module:39
+msgid "Februaryth"
+msgstr "Февраля"
+
+#: its_events/its_events.module:40
+msgid "Marchth"
+msgstr "Марта"
+
+#: its_events/its_events.module:41
+msgid "Aprilth"
+msgstr "Апреля"
+
+#: its_events/its_events.module:42
+msgid "Mayth"
+msgstr "Мая"
+
+#: its_events/its_events.module:43
+msgid "Juneth"
+msgstr "Июня"
+
+#: its_events/its_events.module:44
+msgid "Julyth"
+msgstr "Июля"
+
+#: its_events/its_events.module:45
+msgid "Augustth"
+msgstr "Августа"
+
+#: its_events/its_events.module:46
+msgid "Septemberth"
+msgstr "Сентября"
+
+#: its_events/its_events.module:47
+msgid "Octoberth"
+msgstr "Октябра"
+
+#: its_events/its_events.module:48
+msgid "Novemberth"
+msgstr "Ноября"
+
+#: its_events/its_events.module:49
+msgid "Decemberth"
+msgstr "Декабря"
+
+#: its_events/its_events.module:77
+msgid "Read More"
+msgstr "Подробнее"
+
+#: its_events/its_events.info:0
+msgid "Events"
+msgstr "События"
+
+#: its_events/its_events.info:0
+msgid "Events settings."
+msgstr ""
+
+#: its_languages/its_languages.module:14
+msgid "Language Selector"
+msgstr "Выбор языка"
+
+#: its_languages/its_languages.info:0
+msgid "ITS Languages"
+msgstr ""
+
+#: its_master/its_master.context.inc:42
+msgid "Footer Blocks"
+msgstr ""
+
+#: its_master/its_master.context.inc:43;100
+msgid "blocks"
+msgstr ""
+
+#: its_master/its_master.context.inc:99
+msgid "Topline blocks"
+msgstr ""
+
+#: its_master/its_master.module:23
+msgid "ITS Tokens"
+msgstr ""
+
+#: its_master/its_master.module:24
+msgid "ITS specific tokens group."
+msgstr ""
+
+#: its_master/its_master.module:29
+msgid "Breadcrumb home translated."
+msgstr ""
+
+#: its_master/its_master.module:32
+msgid "Breadcrumb courses translated."
+msgstr ""
+
+#: its_master/its_master.module:35
+msgid "Breadcrumb our cources translated."
+msgstr ""
+
+#: its_master/its_master.module:54
+msgid "Home"
+msgstr "Главная"
+
+#: its_master/its_master.module:60
+msgid "Our Courses"
+msgstr "Наши курсы"
+
+#: its_master/its_master.info:0
+msgid "Master"
+msgstr ""
+
+#: its_master/its_master.info:0
+msgid "Master feature with general site configuration."
+msgstr ""
+
+#: its_menu/its_menu.features.menu_custom.inc:23
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: its_menu/its_menu.features.menu_custom.inc:24
+msgid "The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar."
+msgstr ""
+
+#: its_menu/its_menu.info:0
+msgid "Menu"
+msgstr ""
+
+#: its_menu/its_menu.info:0
+msgid "Menu settings"
+msgstr ""
+
+#: its_pages/its_pages.features.inc:25
+msgid "Page"
+msgstr ""
+
+#: its_pages/its_pages.info:0
+msgid "Pages"
+msgstr ""
+
+#: its_pages/its_pages.info:0
+msgid "Panel pages settings."
+msgstr ""
+
+#: its_partners/its_partners.features.field_instance.inc:161
+msgid "Link"
+msgstr "Ссылка"
+
+#: its_partners/its_partners.features.field_instance.inc:162
+msgid "Logo"
+msgstr "Лого"
+
+#: its_partners/its_partners.features.inc:63 its_partners/its_partners.info:0
+msgid "Partners"
+msgstr "Партнеры"
+
+#: its_partners/its_partners.info:0
+msgid "Partners settings"
+msgstr ""
+
+#: its_perm/its_perm.info:0
+msgid "ITS Role Permissions"
+msgstr ""
+
+#: its_reviews/its_reviews.features.field_instance.inc:176
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: its_reviews/its_reviews.features.inc:54 its_reviews/its_reviews.info:0
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: its_reviews/its_reviews.features.inc:58
+msgid "Name"
+msgstr "Имя"
+
+#: its_reviews/its_reviews.info:0
+msgid "Reviews settings"
+msgstr ""
+
+#: its_social/its_social.module:27
+msgid "ITS Social Links"
+msgstr ""
+
+#: its_social/its_social.module:43
+msgid "Facebook"
+msgstr ""
+
+#: its_social/its_social.info:0
+msgid "ITS Social"
+msgstr ""
+
+#: its_social/its_social.info:0
+msgid "ITS Social blocks and settings"
+msgstr ""
+

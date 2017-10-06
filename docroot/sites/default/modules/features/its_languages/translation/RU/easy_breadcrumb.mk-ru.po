@@ -1,0 +1,26 @@
+# $Id$
+#
+# Mykolaiv (Russian) translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  easy_breadcrumb.module: n/a
+#  easy_breadcrumb.info: n/a
+#  includes/easy_breadcrumb.admin.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-07-30 19:03+0300\n"
+"PO-Revision-Date: 2017-07-30 19:03+0300\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Mykolaiv (Russian) <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=0; plural=(n!=1);\n"
+
+
+#: easy_breadcrumb.module:267 includes/easy_breadcrumb.admin.inc:64
+msgid "Home"
+msgstr "Главная"

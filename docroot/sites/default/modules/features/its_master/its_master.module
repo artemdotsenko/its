@@ -1,0 +1,80 @@
+<?php
+/**
+ * @file
+ * Code for the ITS Master feature.
+ */
+
+include_once 'its_master.features.inc';
+
+/**
+ * Implements hook_page_build().
+ */
+function its_master_page_build(&$page) {
+  $path = libraries_get_path('slick');
+  drupal_add_css($path . '/slick.css');
+  drupal_add_js($path . '/slick.min.js');
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function its_master_token_info() {
+  $types['its'] = array(
+    'name' => t('ITS Tokens'),
+    'description' => t('ITS specific tokens group.'),
+  );
+
+  $tokens['its'] = array(
+    'breadcrumb_home' => array(
+      'name' => t('Breadcrumb home translated.'),
+    ),
+    'breadcrumb_cources' => array(
+      'name' => t('Breadcrumb courses translated.'),
+    ),
+    'breadcrumb_our_cources' => array(
+      'name' => t('Breadcrumb our cources translated.'),
+    ),
+  );
+
+  return array(
+    'types' => $types,
+    'tokens' => $tokens,
+  );
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function its_master_tokens($type, $tokens, $data = array(), $options = array()) {
+  $replacements = array();
+  if ($type == 'its') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'breadcrumb_home':
+          $replacements[$original] = t('Home');
+          break;
+        case 'breadcrumb_cources':
+          $replacements[$original] = t('Courses');
+          break;
+        case 'breadcrumb_our_cources':
+          $replacements[$original] = t('Our Courses');
+          break;
+
+        default:
+          # code...
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function its_master_preprocess_breadcrumb(&$vars) {
+  foreach ($vars['breadcrumb'] as &$crumb) {
+    $crumb = token_replace($crumb, array(), array('clear' => TRUE));
+  }
+}

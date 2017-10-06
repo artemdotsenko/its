@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ITS Role Permissions feature.
+ */
+
+include_once 'its_perm.features.inc';
