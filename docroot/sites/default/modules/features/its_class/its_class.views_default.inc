@@ -792,7 +792,6 @@ function its_class_views_default_views() {
   $handler->display->display_options['fields']['field_people_description']['field'] = 'field_people_description';
   $handler->display->display_options['fields']['field_people_description']['label'] = '';
   $handler->display->display_options['fields']['field_people_description']['alter']['max_length'] = '300';
-  $handler->display->display_options['fields']['field_people_description']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_people_description']['element_label_colon'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
