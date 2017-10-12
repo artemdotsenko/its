@@ -16,7 +16,9 @@ var google_map_field_map;
 (function ($) {
   Drupal.behaviors.google_map_field = {
     attach: function (context) {
-      googleMapFieldNodeDisplay();
+      if (typeof(google) != 'undefined') {
+        googleMapFieldNodeDisplay();
+      }
     }
   };
 

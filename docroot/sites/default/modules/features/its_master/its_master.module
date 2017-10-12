@@ -34,6 +34,12 @@ function its_master_token_info() {
     'breadcrumb_our_cources' => array(
       'name' => t('Breadcrumb our cources translated.'),
     ),
+    'breadcrumb_contact_us' => array(
+      'name' => t('Breadcrumb contact us.'),
+    ),
+    'contact_us_title' => array(
+      'name' => t('Contact us title.'),
+    ),
   );
 
   return array(
@@ -58,6 +64,12 @@ function its_master_tokens($type, $tokens, $data = array(), $options = array()) 
           break;
         case 'breadcrumb_our_cources':
           $replacements[$original] = t('Our Courses');
+          break;
+        case 'breadcrumb_contact_us':
+          $replacements[$original] = t('Contact');
+          break;
+        case 'contact_us_title':
+          $replacements[$original] = t('Our Contacts');
           break;
 
         default:

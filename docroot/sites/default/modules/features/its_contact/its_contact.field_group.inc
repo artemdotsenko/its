@@ -111,9 +111,9 @@ function its_contact_field_group_info() {
     'label' => 'Contacts',
     'weight' => '4',
     'children' => array(
-      0 => 'field_contact_phones',
-      1 => 'field_address_title',
-      2 => 'field_contact_address',
+      0 => 'field_contact_address',
+      1 => 'field_contact_map',
+      2 => 'field_contact_phones',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -129,7 +129,7 @@ function its_contact_field_group_info() {
   $field_groups['group_contact_address|node|phones|form'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_contact_map|node|phones|form';
   $field_group->group_name = 'group_contact_map';

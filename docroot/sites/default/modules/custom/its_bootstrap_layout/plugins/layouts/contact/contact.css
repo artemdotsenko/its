@@ -13,12 +13,7 @@
   width: 25%;
 }
 
-#panels-panel-context-edit-content .col-sm-3 {
+#panels-panel-context-edit-content .col-sm-9 {
   float: left;
-  width: 25%;
-}
-
-#panels-panel-context-edit-content .col-sm-6 {
-  float: left;
-  width: 60%;
+  width: 75%;
 }

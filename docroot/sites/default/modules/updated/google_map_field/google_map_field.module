@@ -188,6 +188,7 @@ function google_map_field_format_field($item, $delta, $display) {
  */
 function google_map_field_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
 
+  // $form['#attached']['js'][] = google_map_field_get_protocol() . 'maps.googleapis.com/maps/api/js?sensor=false';
   $form['#attached']['js'][] = google_map_field_get_protocol() . 'maps.googleapis.com/maps/api/js?sensor=false&key=' . variable_get('google_map_field_apikey', '');
 
   $field_id = is_a($element['#entity'], 'FieldCollectionItemEntity') ? $element['#entity']->item_id : $field['id'];
@@ -410,10 +411,5 @@ function google_map_field_get_fields() {
  * Helper function to return current protocol.
  */
 function google_map_field_get_protocol() {
-  if (isset($_SERVER['HTTPS'])) {
-    return 'HTTPS://';
-  }
-  else {
-    return 'http://';
-  }
+  return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 }

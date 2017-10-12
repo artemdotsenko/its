@@ -27,8 +27,21 @@ function itschool_breadcrumb($variables) {
   $output = '';
   $breadcrumb = $variables['breadcrumb'];
   foreach ($breadcrumb as &$crumb) {
-    $crumb .= '<span class="separator glyphicon glyphicon-menu-right"></span>';
+    if (is_array($crumb) && isset($crumb['data'])) {
+      $crumb['data'] .= '<span class="separator glyphicon glyphicon-menu-right"></span>';
+      if (isset($crumb['class'])) {
+        foreach ($crumb['class'] as $key => $value) {
+          if ($value === 'active') {
+            unset($crumb['class'][$key]);
+          }
+        }
+      }
+    }
+    else {
+      $crumb .= '<span class="separator glyphicon glyphicon-menu-right"></span>';
+    }
   }
+
 
   // Determine if we are to display the breadcrumb.
   $bootstrap_breadcrumb = bootstrap_setting('breadcrumb');

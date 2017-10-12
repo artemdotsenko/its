@@ -16,9 +16,8 @@ $plugin = array(
   'css' => 'contact.css',
   'regions' => array(
     'top-content'    => t('Top Content'),
-    'left'           => t('Left'),
-    'middle'         => t('Middle'),
-    'right'          => t('Right'),
+    'main'           => t('Main'),
+    'sidebar'        => t('Sidebar'),
     'bottom-content' => t('Footer block'),
   ),
 );

@@ -9,9 +9,8 @@
  * - $content: An array of content, each item in the array is keyed to one
  *   panel of the layout. This layout supports the following sections:
  * -- $content['top-content']    => t('Top Content'),
- * -- $content['left']           => t('Left'),
- * -- $content['middle']         => t('Middle'),
- * -- $content['right']          => t('Right'),
+ * -- $content['main']           => t('Main'),
+ * -- $content['sidebar']        => t('Sidebar'),
  * -- $content['bottom-content'] => t('Footer block'),
  */
 ?>
@@ -35,19 +34,14 @@ endif; ?>>
     <div class="row-wrapper clearfix">
       <div class="container">
         <div class="row">
-          <div class="left col-sm-3 no-left-padding">
-            <div class="left-inner">
-              <?php print $content['left']; ?>
+          <div class="main col-sm-9 no-left-padding">
+            <div class="main-inner">
+              <?php print $content['main']; ?>
             </div>
           </div>
-          <div class="middle col-sm-3">
-            <div class="middle-inner">
-              <?php print $content['middle']; ?>
-            </div>
-          </div>
-          <div class="right col-sm-6 no-right-padding">
-            <div class="right-inner">
-              <?php print $content['right']; ?>
+          <div class="sidebar col-sm-3 no-right-padding">
+            <div class="sidebar-inner">
+              <?php print $content['sidebar']; ?>
             </div>
           </div>
         </div>
