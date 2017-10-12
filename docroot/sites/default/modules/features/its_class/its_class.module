@@ -32,3 +32,31 @@ function its_class_preprocess_views_bootstrap_table_plugin_style(&$vars) {
     }
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function its_class_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, 'webform_client_form_') === 0) {
+    $names = array('zapisatsya_na_kurs_ua', 'apply_subject', 'apply_class');
+    if (in_array($form['#node']->webform['machine_name'], $names)) {
+      $subject = menu_get_object();
+      $form['submitted']['payment']['#access'] = FALSE;
+      if ($subject && $subject->type == 'subject') {
+        $price = field_get_items('node', $subject, 'field_subject_price');
+        $price = isset($price[0]) ? $price[0] : NULL;
+
+        if ($price) {
+          $full_price = commerce_currency_format($price['amount'], $price['currency_code']);
+          $part_price = commerce_currency_format($price['amount'] / 4, $price['currency_code']);
+
+          $form['submitted']['payment']['#options'] = array(
+            'full' => t('One time payment') . ' ' . $full_price,
+            'part' => t('Pay in parts') . ' 4 x ' . $part_price,
+          );
+          $form['submitted']['payment']['#access'] = TRUE;
+        }
+      }
+    }
+  }
+}
