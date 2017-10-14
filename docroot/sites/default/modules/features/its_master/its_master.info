@@ -22,6 +22,7 @@ dependencies[] = i18n_taxonomy
 dependencies[] = i18nviews
 dependencies[] = image
 dependencies[] = its_bootstrap_layout
+dependencies[] = its_cities
 dependencies[] = its_contact
 dependencies[] = its_languages
 dependencies[] = its_perm
