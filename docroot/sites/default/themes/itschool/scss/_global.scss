@@ -38,9 +38,14 @@ h2 {
   color: $white;
   border: 2px solid $green;
   border-radius: 24px;
+  &.btn-dark {
+    border-color: $btn-black-bg;
+    background-color: $btn-black-bg;
+  }
   &:hover {
     color: $pure-white;
     background-color: $green;
+    border-color: $green;
   }
 }
 
@@ -112,6 +117,7 @@ h2.pane-title {
     padding: 10px 0;
     color: $white;
     background-color: $green;
+    margin-bottom: 60px;
   }
 }
 
@@ -172,4 +178,55 @@ h1, h2, h3, h4, h5 {
 .kv-city .mk-visible,
 .mk-city .kv-visible {
   display: none !important;
+}
+
+.pagination {
+  > li > a,
+  > li > span {
+    color: #B1B1B1;
+    border: 1px solid #B1B1B1;
+    border-radius: 20px;
+    margin-left: 9px;
+    &:hover,
+    &:focus {
+      color: $pure-white;
+      background-color: $light-green;
+      border-color: $light-green;
+    }
+  }
+  > li:first-child > a,
+  > li:first-child > span {
+    border-radius: 20px;
+  }
+  .pager-last,
+  .pager-first {
+    display: none;
+  }
+  > .active {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span,
+    > span:hover,
+    > span:focus {
+      background-color: $btn-black-bg;
+      border-color: $btn-black-bg;
+    }
+  }
+  > .next > a,
+  > .prev > a {
+    @extend .glyphicon;
+    border: none;
+    padding-top: 9px;
+    color: transparent;
+    &:before {
+      color: #B1B1B1;
+    }
+  }
+  > .next > a {
+    @extend .glyphicon-menu-right;
+  }
+  > .prev > a {
+    @extend .glyphicon-menu-left;
+  }
 }

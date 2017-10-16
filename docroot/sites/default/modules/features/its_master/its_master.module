@@ -28,6 +28,9 @@ function its_master_token_info() {
     'breadcrumb_home' => array(
       'name' => t('Breadcrumb home translated.'),
     ),
+    'breadcrumb_news' => array(
+      'name' => t('Breadcrumb news translated.'),
+    ),
     'breadcrumb_cources' => array(
       'name' => t('Breadcrumb courses translated.'),
     ),
@@ -58,6 +61,9 @@ function its_master_tokens($type, $tokens, $data = array(), $options = array()) 
       switch ($name) {
         case 'breadcrumb_home':
           $replacements[$original] = t('Home');
+          break;
+        case 'breadcrumb_news':
+          $replacements[$original] = t('News');
           break;
         case 'breadcrumb_cources':
           $replacements[$original] = t('Courses');

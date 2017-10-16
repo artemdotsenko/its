@@ -46,23 +46,22 @@
   };
 
   /**
-   * Reviews Slick Slider.
+   * Slick Slider.
    */
-  Drupal.behaviors.itsSlickReviews = {
+  Drupal.behaviors.itsSlickSlider = {
     attach: function (context, setings) {
+      // Reviews.
       var content = $('.view-display-id-panel_reviews .view-content', context);
       if (content.length) {
         content.slick(slickOptions);
       }
-    }
-  }
-
-  /**
-   * Reviews Teacher Slider.
-   */
-  Drupal.behaviors.itsSlickTeacher = {
-    attach: function (context, setings) {
+      // Reviews Teacher.
       var content = $('.view-display-id-panel_pane_subject_theachers .view-content', context);
+      if (content.length) {
+        content.slick(slickOptions);
+      }
+      // Popular News.
+      var content = $('.view-display-id-panel_pane_popular_news .view-content', context);
       if (content.length) {
         content.slick(slickOptions);
       }

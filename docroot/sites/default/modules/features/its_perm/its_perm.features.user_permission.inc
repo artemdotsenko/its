@@ -134,6 +134,15 @@ function its_perm_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'access statistics'.
+  $permissions['access statistics'] = array(
+    'name' => 'access statistics',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'statistics',
+  );
+
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
@@ -444,6 +453,15 @@ function its_perm_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer statistics'.
+  $permissions['administer statistics'] = array(
+    'name' => 'administer statistics',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'statistics',
   );
 
   // Exported permission: 'administer taxonomy'.
@@ -1574,6 +1592,18 @@ function its_perm_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: 'view post access counter'.
+  $permissions['view post access counter'] = array(
+    'name' => 'view post access counter',
+    'roles' => array(
+      'Content Editor' => 'Content Editor',
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'statistics',
   );
 
   // Exported permission: 'view private files'.

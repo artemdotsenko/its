@@ -240,3 +240,11 @@
     margin: 15px 0;
   }
 }
+
+.pane-its-class-apply-links {
+  position: relative;
+  height: 8px;
+  > .pane-content {
+    position: absolute;
+  }
+}

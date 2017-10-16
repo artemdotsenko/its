@@ -5,3 +5,22 @@
  */
 
 include_once 'its_article.features.inc';
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function its_article_preprocess_node(&$vars) {
+  $in_view = array('teaser', 'full');
+  if ($vars['node']->type == 'article' && in_array($vars['view_mode'], $in_view)) {
+    $statistics = statistics_get($vars['node']->nid);
+    $vars['totalcount'] = $statistics['totalcount'];
+
+    $tid = field_get_items('node', $vars['node'], 'field_news_category');
+    $cat = array();
+    foreach ($tid as $value) {
+      $term = taxonomy_term_load($value['tid']);
+      $cat[] = l($term->name, 'taxonomy/term/' . $value['tid']);
+    }
+    $vars['categories'] = implode(', ', $cat);
+  }
+}
