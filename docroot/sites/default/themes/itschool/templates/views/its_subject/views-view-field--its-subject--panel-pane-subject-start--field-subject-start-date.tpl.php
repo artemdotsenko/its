@@ -24,11 +24,13 @@
 ?>
 
 <div class="start-date-wrapper">
-  <div class="row no-gutters">
-    <div class="col-xs-3"><span class="glyphicon glyphicon-calendar"></span></div>
-    <div class="col-xs-9">
-      <h4><?php print t('Nearest course'); ?></h4>
-      <div class="smaller"><?php print t('starts');?> <?php print $output; ?></div>
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-xs-3"><span class="glyphicon glyphicon-calendar"></span></div>
+      <div class="col-xs-9">
+        <h4><?php print t('Nearest course'); ?></h4>
+        <div class="smaller"><?php print t('starts');?> <?php print $output; ?></div>
+      </div>
     </div>
   </div>
 </div>

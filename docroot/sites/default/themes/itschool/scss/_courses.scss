@@ -220,10 +220,14 @@
   background: $light-grey;
   border-radius: 36px;
   color: $white;
-  padding: 16px 26px;
+  padding: 16px 0px 16px 30px;
   h4 {
     color: $pure-white;
     margin: 0;
+    margin-bottom: 2px;
+  }
+  .smaller {
+    font-size: 13px;
   }
   span.glyphicon {
     font-size: 30px;
@@ -231,20 +235,59 @@
 }
 
 .panel-page-subject {
+  h1 {
+    margin-top: 0;
+    font-size: 35px;
+    margin-bottom: 7px;
+  }
   .one-column-container {
     margin-bottom: 20px;
   }
   .main-content {
     border: 1px solid $silver;
-    padding: 15px;
-    margin: 15px 0;
+    padding: 40px;
+    margin: 40px 0;
+  }
+  .sidebar {
+    h2 {
+      text-transform: none;
+      font-family: "Roboto";
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 35px;
+      color: $emperor;
+    }
+    .panel-pane {
+      margin-bottom: 85px;
+    }
+    .form-control {
+      border-radius: 6px;
+      color: $btn-black-bg;
+      font-size: $normal-font-size;
+    }
+    .btn {
+      @extend .btn-dark;
+      text-transform: none;
+      &:hover {
+        color: $pure-white;
+        background-color: $green;
+        border-color: $green;
+      }
+    }
+  }
+  .content-inner,
+  .main-content {
+    max-width: 820px;
   }
 }
 
 .pane-its-class-apply-links {
-  position: relative;
   height: 8px;
-  > .pane-content {
-    position: absolute;
+  margin-top: 70px;
+  margin-bottom: -25px;
+  .pane-content a {
+    margin-left: 50px;
+    margin-right: 30px;
+    text-transform: none;
   }
 }

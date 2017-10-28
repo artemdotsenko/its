@@ -123,6 +123,9 @@
   .read-more-wrapper {
     padding: 0 50px;
     margin-bottom: -24px;
+    .btn {
+      text-transform: none;
+    }
     .btn span {
       margin-right: 15px;
     }

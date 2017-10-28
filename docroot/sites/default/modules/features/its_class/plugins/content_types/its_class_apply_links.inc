@@ -52,7 +52,7 @@ function its_class_apply_links_form_render($subtype, $conf, $args, $context) {
       'external' => TRUE,
       'fragment' => 'apply-subject',
       'attributes' => array(
-        'class' => array('btn'),
+        'class' => array('btn', 'btn-dark'),
       ),
     )
   );
@@ -63,7 +63,7 @@ function its_class_apply_links_form_render($subtype, $conf, $args, $context) {
     array(
       'html' => TRUE,
       'attributes' => array(
-        'class' => array('btn', 'btn-black'),
+        'class' => array('btn', 'btn-dark'),
       ),
     )
   );

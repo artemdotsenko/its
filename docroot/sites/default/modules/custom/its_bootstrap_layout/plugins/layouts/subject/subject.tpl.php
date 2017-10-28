@@ -34,11 +34,11 @@ endif; ?>>
       <div class="container">
         <div class="row">
           <div class="content col-sm-9 no-left-padding">
-            <div class="clearfix">
-              <div class="title col-sm-9 no-left-padding">
+            <div class="content-inner clearfix">
+              <div class="title col-sm-8 no-left-padding">
                 <?php print $content['title'];?>
               </div>
-              <div class="date col-sm-3 no-right-padding">
+              <div class="date col-sm-4 no-right-padding">
                 <?php print $content['date'];?>
               </div>
             </div>

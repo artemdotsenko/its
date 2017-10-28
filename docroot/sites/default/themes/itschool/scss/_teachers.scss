@@ -21,10 +21,17 @@
   .views-field-field-people-full-name a {
     color: $body;
     font-weight: bold;
-    font-size: $big-font-size;
+    font-size: $huge-font-size;
   }
   .views-field-field-people-position {
-    margin-bottom: 30px;
+    margin-top: 4px;
+    margin-bottom: 26px;
     font-size: $sub-font-size;
+  }
+  .views-field-field-people-description {
+    line-height: 1.625;
+  }
+  .views-row {
+    font-family: "Roboto";
   }
 }

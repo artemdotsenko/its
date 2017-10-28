@@ -8,7 +8,7 @@
 body {
   color: $body;
   font-size: $normal-font-size;
-  font-family: $robotoc;
+  font-family: $roboto;
   &.toolbar-drawer {
     padding-top: 30px !important;
   }
@@ -41,6 +41,10 @@ h2 {
   &.btn-dark {
     border-color: $btn-black-bg;
     background-color: $btn-black-bg;
+    color: $white;
+    .glyphicon {
+      margin-right: 20px;
+    }
   }
   &:hover {
     color: $pure-white;
@@ -118,6 +122,9 @@ h2.pane-title {
     color: $white;
     background-color: $green;
     margin-bottom: 60px;
+    .row {
+      padding-left: 10px !important;
+    }
   }
 }
 
@@ -195,7 +202,9 @@ h1, h2, h3, h4, h5 {
     }
   }
   > li:first-child > a,
-  > li:first-child > span {
+  > li:first-child > span,
+  > li:last-child > a,
+  > li:last-child > span {
     border-radius: 20px;
   }
   .pager-last,
@@ -221,6 +230,14 @@ h1, h2, h3, h4, h5 {
     color: transparent;
     &:before {
       color: #B1B1B1;
+    }
+    &:hover,
+    &:focus,
+    span,
+    span:hover,
+    span:focus {
+      background-color: transparent;
+      border-color: transparent;
     }
   }
   > .next > a {
