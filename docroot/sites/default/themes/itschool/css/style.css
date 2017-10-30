@@ -8843,6 +8843,14 @@ form .input-group-addon:first-child {
   border-radius: 25px;
 }
 
+#comment-form .btn-success {
+  background-color: #FFF;
+}
+#comment-form .btn-success:hover {
+  color: #888888;
+  background-color: #2ECC71;
+}
+
 /* About. */
 .page-about h1 {
   margin-bottom: 50px;

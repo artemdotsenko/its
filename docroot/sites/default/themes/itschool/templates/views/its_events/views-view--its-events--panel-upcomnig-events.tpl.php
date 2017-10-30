@@ -28,45 +28,61 @@
  */
 ?>
 <div class="<?php print $classes; ?>">
+  <h2><?php print t('Upcoming events'); ?></h2>
+  <div class="upcoming-event-description">
+    <?php print t('[upcaoming_event_description]'); ?>
+  </div>
+  <?php if ($header): ?>
+    <div class="view-header">
+      <?php print $header; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($exposed): ?>
+    <div class="view-filters">
+      <?php print $exposed; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($attachment_before): ?>
+    <div class="attachment attachment-before">
+      <?php print $attachment_before; ?>
+    </div>
+  <?php endif; ?>
 
   <?php if ($rows): ?>
-    <h2 class="pane-title">
-      <?php print t('Upcoming events'); ?>
-    </h2>
-    <p><?php print t('[upcoming_events_description]'); ?></p>
-
-    <?php if ($header): ?>
-      <div class="view-header">
-        <?php print $header; ?>
-      </div>
-    <?php endif; ?>
-
     <div class="view-content">
-      <div class="container">
-        <div class="row">
-          <?php print $rows; ?>
-        </div>
-      </div>
+      <?php print $rows; ?>
     </div>
-
-    <?php if ($footer): ?>
-      <div class="view-footer">
-        <?php print $footer; ?>
-      </div>
-    <?php endif; ?>
-    <div class="more-link-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="more-link-wings">
-            <?php print l(t('All events'), '/events'); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($pager): ?>
+    <?php print $pager; ?>
+  <?php endif; ?>
+
+  <?php if ($attachment_after): ?>
+    <div class="attachment attachment-after">
+      <?php print $attachment_after; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($more): ?>
+    <?php print $more; ?>
+  <?php endif; ?>
+
+  <?php if ($footer): ?>
+    <div class="view-footer">
+      <?php print $footer; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($feed_icon): ?>
+    <div class="feed-icon">
+      <?php print $feed_icon; ?>
     </div>
   <?php endif; ?>
 

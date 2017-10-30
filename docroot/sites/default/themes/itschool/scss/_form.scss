@@ -20,3 +20,13 @@ form {
   padding-right: 25px;
   border-radius: 25px;
 }
+
+#comment-form {
+  .btn-success {
+    background-color: $pure-white;
+    &:hover {
+      color: $body;
+      background-color: $green;
+    }
+  }
+}

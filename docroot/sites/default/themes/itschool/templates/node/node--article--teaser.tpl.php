@@ -107,8 +107,9 @@
             <span class="glyphicon glyphicon-folder-open"></span>
             <?php print $categories; ?>
           </div>
-          <div class="comments col-sm-4 element-invisible">
+          <div class="comments col-sm-4 no-right-padding">
             <span class="glyphicon glyphicon-comment"></span>
+            <?php print $comment_count; ?>
           </div>
         </div>
         <div class="row">
