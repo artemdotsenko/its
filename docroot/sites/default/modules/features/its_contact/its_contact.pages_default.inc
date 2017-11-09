@@ -80,17 +80,13 @@ function its_contact_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-a97b5d49-e46a-4f9f-b138-5885e58f769f';
+  $pane->pid = 'new-ba738b4f-2297-417f-bcaf-3f7fd52eaab2';
   $pane->panel = 'main';
   $pane->type = 'views_panes';
-  $pane->subtype = 'its_contact-panel_pane_contact_list';
+  $pane->subtype = 'its_contacts-panel_pane_contacts';
   $pane->shown = TRUE;
   $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
+  $pane->configuration = array();
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
@@ -99,9 +95,9 @@ function its_contact_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'a97b5d49-e46a-4f9f-b138-5885e58f769f';
-  $display->content['new-a97b5d49-e46a-4f9f-b138-5885e58f769f'] = $pane;
-  $display->panels['main'][0] = 'new-a97b5d49-e46a-4f9f-b138-5885e58f769f';
+  $pane->uuid = 'ba738b4f-2297-417f-bcaf-3f7fd52eaab2';
+  $display->content['new-ba738b4f-2297-417f-bcaf-3f7fd52eaab2'] = $pane;
+  $display->panels['main'][0] = 'new-ba738b4f-2297-417f-bcaf-3f7fd52eaab2';
   $pane = new stdClass();
   $pane->pid = 'new-a127fae3-0701-4c39-a96a-29bd9749f3fe';
   $pane->panel = 'sidebar';

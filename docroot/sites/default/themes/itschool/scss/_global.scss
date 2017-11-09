@@ -247,3 +247,45 @@ h1, h2, h3, h4, h5 {
     @extend .glyphicon-menu-left;
   }
 }
+
+.wing-triangle {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  .left-wing,
+  .right-wing {
+    width: calc(50% - 46px);
+    height: 37px;
+    border-top: 1px solid #F2F2F2;
+    float: left;
+  }
+  .triangle {
+    width: 92px;
+    height: 37px;
+    float: left;
+    background: image-url('triabgle-down.png');
+  }
+}
+
+.pager--infinite-scroll {
+  li > a {
+    padding: 12px 36px;
+    border-radius: 26px;
+    color: $body;
+  }
+  li > a:before,
+  li > a:after {
+    content: ' ';
+    width: 346px;
+    background-color: #DDD;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: 41px;
+  }
+  li > a:before {
+    left: 195px;
+  }
+  li > a:after {
+    right: 195px;
+  }
+}

@@ -22,6 +22,5 @@
  * the view is modified.
  */
 ?>
-<?php if (!empty($output)): ?>
-  <strong><?php print t('Course duration:');?></strong> <?php print $output; ?>
-<?php endif; ?>
+<div class="subject-prefix"><?php print t('Subject theme:');?></div>
+<?php print $output; ?>

@@ -29,6 +29,36 @@ function its_events_views_api($module = NULL, $api = NULL) {
 function its_events_image_default_styles() {
   $styles = array();
 
+  // Exported image style: events_list.
+  $styles['events_list'] = array(
+    'label' => 'Events List (240x318)',
+    'effects' => array(
+      8 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 240,
+          'height' => 318,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: nearest_event.
+  $styles['nearest_event'] = array(
+    'label' => 'Nearest Event (1240x560)',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1240,
+          'height' => 560,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: upcoming_events.
   $styles['upcoming_events'] = array(
     'label' => 'Upcoming Events (474x420)',

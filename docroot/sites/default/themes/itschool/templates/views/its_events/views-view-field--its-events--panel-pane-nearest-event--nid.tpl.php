@@ -22,4 +22,6 @@
  * the view is modified.
  */
 ?>
-<?php print l(t('Subject details'), "node/{$output}"); ?>
+<?php print l(t('Subject details'), "node/{$output}", array(
+  'attributes' => array('class' => array('btn'))
+)); ?>

@@ -7164,11 +7164,11 @@ button.close {
     bottom: 20px;
   }
 }
-.clearfix:before, .pane-its-events-panel-upcomnig-events .view-content:before, .clearfix:after, .pane-its-events-panel-upcomnig-events .view-content:after {
+.clearfix:before, .pane-its-events-panel-upcomnig-events .view-content-main:before, .clearfix:after, .pane-its-events-panel-upcomnig-events .view-content-main:after {
   content: " ";
   display: table;
 }
-.clearfix:after, .pane-its-events-panel-upcomnig-events .view-content:after {
+.clearfix:after, .pane-its-events-panel-upcomnig-events .view-content-main:after {
   clear: both;
 }
 
@@ -8821,6 +8821,46 @@ h1, h2, h3, h4, h5 {
   border-color: transparent;
 }
 
+.wing-triangle {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.wing-triangle .left-wing,
+.wing-triangle .right-wing {
+  width: calc(50% - 46px);
+  height: 37px;
+  border-top: 1px solid #F2F2F2;
+  float: left;
+}
+.wing-triangle .triangle {
+  width: 92px;
+  height: 37px;
+  float: left;
+  background: url('../images/triabgle-down.png');
+}
+
+.pager--infinite-scroll li > a {
+  padding: 12px 36px;
+  border-radius: 26px;
+  color: #888888;
+}
+.pager--infinite-scroll li > a:before,
+.pager--infinite-scroll li > a:after {
+  content: ' ';
+  width: 346px;
+  background-color: #DDD;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 41px;
+}
+.pager--infinite-scroll li > a:before {
+  left: 195px;
+}
+.pager--infinite-scroll li > a:after {
+  right: 195px;
+}
+
 /* Form. */
 form .form-actions button {
   color: #888888;
@@ -9283,6 +9323,12 @@ header.navbar {
 }
 
 /* Contact */
+.page-contact h1.page-header {
+  max-width: 1240px;
+  margin: 0 auto;
+  border: none;
+  margin-bottom: 55px;
+}
 @media screen and (min-width: 768px) {
   .page-contact .right-inner {
     padding-left: 80px;
@@ -9306,6 +9352,65 @@ header.navbar {
 }
 .page-contact #block-system-main {
   margin-bottom: 40px;
+}
+
+.view-display-id-panel_pane_contacts .views-row {
+  width: 400px;
+  float: left;
+}
+.view-display-id-panel_pane_contacts .views-row-odd {
+  margin-right: 20px;
+}
+.view-display-id-panel_pane_contacts .google_map_field_display {
+  width: 100%;
+  height: 360px;
+}
+.view-display-id-panel_pane_contacts .views-field-field-city {
+  font-family: "PTS";
+  color: #04050A;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-phone .glyphicon, .view-display-id-panel_pane_contacts .views-field-field-contact-phone .pagination > .next > a,
+.view-display-id-panel_pane_contacts .views-field-field-contact-phone .pagination > .prev > a, .view-display-id-panel_pane_contacts .views-field-field-contact-phone .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .on, .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .view-display-id-panel_pane_contacts .views-field-field-contact-phone .on, .view-display-id-panel_pane_contacts .views-field-field-contact-phone .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .off, .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .view-display-id-panel_pane_contacts .views-field-field-contact-phone .off,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .glyphicon,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .pagination > .next > a,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .pagination > .prev > a,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .on,
+.pane-its-reviews-panel-reviews div.fivestar-widget-static .star .view-display-id-panel_pane_contacts .views-field-field-contact-address .on,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .off,
+.pane-its-reviews-panel-reviews div.fivestar-widget-static .star .view-display-id-panel_pane_contacts .views-field-field-contact-address .off {
+  margin-right: 15px;
+  font-size: 16px;
+  color: #2E2E2E;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-phone,
+.view-display-id-panel_pane_contacts .views-field-field-contact-phones,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address {
+  font-size: 18px;
+  font-family: "Roboto";
+  color: #6F6F6F;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-phones {
+  margin-top: 6px;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-phones ul {
+  list-style: none;
+  margin: 0 0 0 33px;
+  padding: 0;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-phones ul li {
+  margin-bottom: 6px;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-address {
+  margin-top: 33px;
+  margin-bottom: 30px;
+}
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .glyphicon, .view-display-id-panel_pane_contacts .views-field-field-contact-address .pagination > .next > a,
+.view-display-id-panel_pane_contacts .views-field-field-contact-address .pagination > .prev > a, .view-display-id-panel_pane_contacts .views-field-field-contact-address .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .on, .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .view-display-id-panel_pane_contacts .views-field-field-contact-address .on, .view-display-id-panel_pane_contacts .views-field-field-contact-address .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .off, .pane-its-reviews-panel-reviews div.fivestar-widget-static .star .view-display-id-panel_pane_contacts .views-field-field-contact-address .off {
+  height: 36px;
+  float: left;
+  padding-top: 5px;
 }
 
 /* Courses. */
@@ -9661,42 +9766,47 @@ header.navbar {
   background-color: #FFF;
   text-align: center;
 }
-.pane-its-events-panel-upcomnig-events p {
+.pane-its-events-panel-upcomnig-events .view-content-main p {
   max-width: 778px;
   margin: 0 auto;
   font-size: 16px;
   line-height: 26px;
+}
+.pane-its-events-panel-upcomnig-events h2 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .pane-its-events-panel-upcomnig-events .pane-title, .pane-its-events-panel-upcomnig-events .pane-its-contact-its-contact-sign-up h2, .pane-its-contact-its-contact-sign-up .pane-its-events-panel-upcomnig-events h2,
 .pane-its-events-panel-upcomnig-events .view-header {
   max-width: 778px;
   text-align: center;
   margin: 0 auto 30px;
-  letter-spacing: 4px;
+  font-size: 16px;
 }
 .pane-its-events-panel-upcomnig-events .view-header {
   margin-bottom: 70px;
 }
-.pane-its-events-panel-upcomnig-events .view-content {
+.pane-its-events-panel-upcomnig-events .view-content-main {
   background-color: #F9F9F9;
   min-height: 369px;
   margin-top: 60px;
 }
-.pane-its-events-panel-upcomnig-events .view-content .row {
-  margin-left: -30px;
-  margin-right: -30px;
-}
-.pane-its-events-panel-upcomnig-events .view-footer {
+.pane-its-events-panel-upcomnig-events .view-footer-main {
   clear: both;
 }
-.pane-its-events-panel-upcomnig-events .views-row {
-  max-width: 430px;
+.pane-its-events-panel-upcomnig-events .view-content-main .views-row {
+  width: 400px;
+  float: left;
   margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
-  .pane-its-events-panel-upcomnig-events .views-row {
+  .pane-its-events-panel-upcomnig-events .view-content-main .views-row {
     margin-bottom: 20px;
   }
+}
+.pane-its-events-panel-upcomnig-events .view-content-main .views-row.views-row-even {
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .pane-its-events-panel-upcomnig-events .event-link-wrapper {
   display: block;
@@ -9759,6 +9869,139 @@ header.navbar {
 }
 .pane-its-events-panel-upcomnig-events .more-link-wrapper {
   margin-top: 44px;
+}
+
+.view-display-id-panel_pane_nearest_event h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 46px;
+  position: relative;
+}
+.view-display-id-panel_pane_nearest_event h2:before, .view-display-id-panel_pane_nearest_event h2:after {
+  position: absolute;
+  content: '';
+  width: calc(50% - 292px);
+  min-width: 10px;
+  border-bottom: 1px solid #CCC;
+  top: calc(50% - 1px);
+}
+.view-display-id-panel_pane_nearest_event h2:before {
+  left: 70px;
+  border-radius: 2px 0 0 2px;
+}
+.view-display-id-panel_pane_nearest_event h2:after {
+  right: 70px;
+  border-radius: 0 2px 2px 0;
+}
+.view-display-id-panel_pane_nearest_event .views-row {
+  position: relative;
+  min-height: 560px;
+  background: url('../images/banner.png') 0 0 no-repeat;
+}
+.view-display-id-panel_pane_nearest_event .views-field-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 76px;
+  font-size: 32px;
+  font-family: "PT Sans";
+  color: #FFF;
+  margin-bottom: 48px;
+}
+.view-display-id-panel_pane_nearest_event .views-field-title .subject-prefix {
+  font-family: "Roboto";
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.view-display-id-panel_pane_nearest_event .views-field-field-subject-start-date {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 40%;
+  width: 650px;
+  height: 210px;
+  margin-left: -325px;
+  background-color: #292929;
+  text-align: center;
+  padding: 33px 70px;
+  color: #FFF;
+  font-family: "Roboto";
+  font-size: 18px;
+}
+.view-display-id-panel_pane_nearest_event .views-field-field-subject-start-date .countdown-inner {
+  font-size: 80px;
+  font-weight: 100;
+  line-height: 100px;
+}
+.view-display-id-panel_pane_nearest_event .views-field-field-subject-start-date .countdown-labels span {
+  font-family: "Roboto";
+  font-weight: bold;
+  float: left;
+  width: 80px;
+  margin-right: 64px;
+}
+.view-display-id-panel_pane_nearest_event .views-field-field-subject-start-date .countdown-labels .minutes {
+  margin-right: 55px;
+}
+.view-display-id-panel_pane_nearest_event .views-field-field-subject-start-date .countdown-labels .seconds {
+  margin-right: 0;
+}
+.view-display-id-panel_pane_nearest_event .views-field-nid {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.view-display-id-panel_pane_nearest_event .views-field-nid .btn, .view-display-id-panel_pane_nearest_event .views-field-nid .more-link-wings a, .more-link-wings .view-display-id-panel_pane_nearest_event .views-field-nid a, .view-display-id-panel_pane_nearest_event .views-field-nid .pane-its-events-panel-upcomnig-events .event-link-wrapper .event-link, .pane-its-events-panel-upcomnig-events .event-link-wrapper .view-display-id-panel_pane_nearest_event .views-field-nid .event-link {
+  text-transform: none;
+}
+
+.view-display-id-panel_all_events h2 {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 62px;
+}
+.view-display-id-panel_all_events .views-row {
+  width: 608px;
+  float: left;
+  border: 1px solid #F2F2F2;
+  margin: 1px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.view-display-id-panel_all_events .views-row-odd {
+  margin-right: 20px;
+}
+.view-display-id-panel_all_events .views-field-field-subject-image {
+  width: 240px;
+  float: left;
+  margin: -26px 38px -26px -25px;
+}
+.view-display-id-panel_all_events .views-field-field-subject-start-date {
+  font-size: 14px;
+  font-family: "PTS";
+  color: #717171;
+  margin-bottom: 20px;
+}
+.view-display-id-panel_all_events .views-field-title {
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.view-display-id-panel_all_events .views-field-title a {
+  color: #4E4E4E;
+}
+.view-display-id-panel_all_events .views-field-body {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.view-display-id-panel_all_events .views-field-nid a {
+  text-transform: none;
 }
 
 /* Article. */
@@ -10188,11 +10431,6 @@ ul.its-social-links-list li a:focus, ul.its-social-links-list li a:active, ul.it
 .pane-its-contact-its-contact-sign-up .more-link-wings:after,
 .pane-its-contact-its-contact-sign-up .more-link-wings:before {
   width: calc(50% - 81px);
-}
-.i18n-ru .pane-its-contact-its-contact-sign-up .more-link-wings:after, .i18n-ua .pane-its-contact-its-contact-sign-up .more-link-wings:after, .i18n-ru
-.pane-its-contact-its-contact-sign-up .more-link-wings:before, .i18n-ua
-.pane-its-contact-its-contact-sign-up .more-link-wings:before {
-  width: calc(50% - 75px);
 }
 .pane-its-contact-its-contact-sign-up .form-actions button {
   border-color: #CCC;

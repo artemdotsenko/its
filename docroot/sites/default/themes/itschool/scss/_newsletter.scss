@@ -31,10 +31,6 @@
   .more-link-wings:after,
   .more-link-wings:before {
     width: calc(50% - 81px);
-    .i18n-ru &,
-    .i18n-ua & {
-      width: calc(50% - 75px);
-    }
   }
   .form-actions button {
     border-color: $silver;

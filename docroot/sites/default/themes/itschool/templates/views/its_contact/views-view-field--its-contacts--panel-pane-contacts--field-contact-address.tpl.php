@@ -22,6 +22,6 @@
  * the view is modified.
  */
 ?>
-<?php if (!empty($output)): ?>
-  <strong><?php print t('Course duration:');?></strong> <?php print $output; ?>
-<?php endif; ?>
+<span class="glyphicon glyphicon-map-marker"></span><?php print str_replace(
+  array('<p>', '</p>'), '', $output
+  ); ?>

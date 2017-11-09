@@ -22,4 +22,6 @@
  * the view is modified.
  */
 ?>
-<?php print l(t('Details'), "node/{$output}"); ?>
+<?php print l(t('Details'), "node/{$output}", array(
+  'attributes' => array('class' => array('btn', 'btn-dark'))
+)); ?>

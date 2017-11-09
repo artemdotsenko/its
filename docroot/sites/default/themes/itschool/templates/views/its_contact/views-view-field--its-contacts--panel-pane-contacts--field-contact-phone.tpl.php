@@ -22,6 +22,4 @@
  * the view is modified.
  */
 ?>
-<?php if (!empty($output)): ?>
-  <strong><?php print t('Course duration:');?></strong> <?php print $output; ?>
-<?php endif; ?>
+<span class="glyphicon glyphicon-earphone"></span><?php print strip_tags($output); ?>

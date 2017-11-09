@@ -1,5 +1,11 @@
 /* Contact */
 .page-contact {
+  h1.page-header {
+    max-width: 1240px;
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 55px;
+  }
   .right-inner {
     @media #{$tablet} {
       padding-left: 80px;
@@ -23,5 +29,60 @@
   }
   #block-system-main {
     margin-bottom: 40px;
+  }
+}
+
+.view-display-id-panel_pane_contacts {
+  .views-row {
+    width: 400px;
+    float: left;
+  }
+  .views-row-odd {
+    margin-right: 20px;
+  }
+  .google_map_field_display {
+    width: 100%;
+    height: 360px;
+  }
+  .views-field-field-city {
+    font-family: "PTS";
+    color: #04050A;
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+  .views-field-field-contact-phone,
+  .views-field-field-contact-address {
+    .glyphicon {
+      margin-right: 15px;
+      font-size: 16px;
+      color: #2E2E2E;
+    }
+  }
+  .views-field-field-contact-phone,
+  .views-field-field-contact-phones,
+  .views-field-field-contact-address {
+    font-size: 18px;
+    font-family: "Roboto";
+    color: #6F6F6F;
+  }
+  .views-field-field-contact-phones {
+    margin-top: 6px;
+    ul {
+      list-style: none;
+      margin: 0 0 0 33px;
+      padding: 0;
+      li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .views-field-field-contact-address {
+    margin-top: 33px;
+    margin-bottom: 30px;
+    .glyphicon {
+      height: 36px;
+      float: left;
+      padding-top: 5px;
+    }
   }
 }

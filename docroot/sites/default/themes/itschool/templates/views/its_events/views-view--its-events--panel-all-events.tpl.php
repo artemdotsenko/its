@@ -29,7 +29,7 @@
 ?>
 <div class="<?php print $classes; ?> container">
   <div class="row">
-    <h2><?php print t('');?></h2>
+    <h2><?php print t('Events and activities');?></h2>
     <?php if ($header): ?>
       <div class="view-header">
         <?php print $header; ?>

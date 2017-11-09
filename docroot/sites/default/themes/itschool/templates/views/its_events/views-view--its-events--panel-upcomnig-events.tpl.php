@@ -29,30 +29,19 @@
 ?>
 <div class="<?php print $classes; ?>">
   <h2><?php print t('Upcoming events'); ?></h2>
-  <div class="upcoming-event-description">
-    <?php print t('[upcaoming_event_description]'); ?>
-  </div>
   <?php if ($header): ?>
-    <div class="view-header">
+    <div class="view-header upcoming-event-description">
       <?php print $header; ?>
     </div>
   <?php endif; ?>
 
-  <?php if ($exposed): ?>
-    <div class="view-filters">
-      <?php print $exposed; ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if ($attachment_before): ?>
-    <div class="attachment attachment-before">
-      <?php print $attachment_before; ?>
-    </div>
-  <?php endif; ?>
-
   <?php if ($rows): ?>
-    <div class="view-content">
-      <?php print $rows; ?>
+    <div class="view-content-main">
+      <div class="container">
+        <div class="row">
+          <?php print $rows; ?>
+        </div>
+      </div>
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
@@ -70,20 +59,14 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($more): ?>
-    <?php print $more; ?>
-  <?php endif; ?>
-
   <?php if ($footer): ?>
-    <div class="view-footer">
+    <div class="view-footer-main">
       <?php print $footer; ?>
     </div>
   <?php endif; ?>
 
-  <?php if ($feed_icon): ?>
-    <div class="feed-icon">
-      <?php print $feed_icon; ?>
-    </div>
-  <?php endif; ?>
+  <div class="more-events more-link-wings">
+    <?php print l(t('All Events'), 'events'); ?>
+  </div>
 
 </div><?php /* class view */ ?>
