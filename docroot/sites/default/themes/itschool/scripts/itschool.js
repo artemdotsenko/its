@@ -71,7 +71,7 @@
   /**
    * Event Countdown.
    */
-  Drupal.behaviors.itsSlickSlider = {
+  Drupal.behaviors.itsEventTimer = {
     attach: function (context, settings) {
       if ($('body', context).hasClass('panel-page-all-events')) {
         // Set the date we're counting down to.

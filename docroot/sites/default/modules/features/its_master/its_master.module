@@ -102,3 +102,12 @@ function its_master_preprocess_breadcrumb(&$vars) {
     $crumb = token_replace($crumb, array(), array('clear' => TRUE));
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function its_master_form_comment_form_alter(&$form, &$form_state) {
+  $form['comment_body']['und'][0]['#title'] = t('Comment body');
+  $form['actions']['submit']['#value'] = t('Comment save');
+  $form['actions']['preview']['#value'] = t('Comment preview');
+}
