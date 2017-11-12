@@ -104,7 +104,22 @@ function its_contact_default_page_manager_pages() {
   $pane->type = 'block';
   $pane->subtype = 'webform-client-block-91';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'site_language',
+        'settings' => array(
+          'language' => array(
+            'ru' => 'ru',
+            'default' => 0,
+            'ua' => 0,
+            'en' => 0,
+          ),
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'override_title' => 0,
     'override_title_text' => '',
@@ -121,6 +136,82 @@ function its_contact_default_page_manager_pages() {
   $pane->uuid = 'a127fae3-0701-4c39-a96a-29bd9749f3fe';
   $display->content['new-a127fae3-0701-4c39-a96a-29bd9749f3fe'] = $pane;
   $display->panels['sidebar'][0] = 'new-a127fae3-0701-4c39-a96a-29bd9749f3fe';
+  $pane = new stdClass();
+  $pane->pid = 'new-728bda77-61c6-4673-bdef-05dce24b4a7e';
+  $pane->panel = 'sidebar';
+  $pane->type = 'block';
+  $pane->subtype = 'webform-client-block-145';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'site_language',
+        'settings' => array(
+          'language' => array(
+            'ua' => 'ua',
+            'default' => 0,
+            'ru' => 0,
+            'en' => 0,
+          ),
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '728bda77-61c6-4673-bdef-05dce24b4a7e';
+  $display->content['new-728bda77-61c6-4673-bdef-05dce24b4a7e'] = $pane;
+  $display->panels['sidebar'][1] = 'new-728bda77-61c6-4673-bdef-05dce24b4a7e';
+  $pane = new stdClass();
+  $pane->pid = 'new-c29659d8-9b6b-4ef1-b20d-ae77a37dca01';
+  $pane->panel = 'sidebar';
+  $pane->type = 'block';
+  $pane->subtype = 'webform-client-block-92';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'site_language',
+        'settings' => array(
+          'language' => array(
+            'en' => 'en',
+            'default' => 0,
+            'ru' => 0,
+            'ua' => 0,
+          ),
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'c29659d8-9b6b-4ef1-b20d-ae77a37dca01';
+  $display->content['new-c29659d8-9b6b-4ef1-b20d-ae77a37dca01'] = $pane;
+  $display->panels['sidebar'][2] = 'new-c29659d8-9b6b-4ef1-b20d-ae77a37dca01';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

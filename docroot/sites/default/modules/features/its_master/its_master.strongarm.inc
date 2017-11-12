@@ -49,7 +49,7 @@ function its_master_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'statistics_day_timestamp';
-  $strongarm->value = 1508149060;
+  $strongarm->value = 1510525395;
   $export['statistics_day_timestamp'] = $strongarm;
 
   $strongarm = new stdClass();

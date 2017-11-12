@@ -8,11 +8,12 @@ base theme = bootstrap
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-regions[topline]        = 'Top Line'
-regions[header]         = 'Top Bar'
-regions[highlighted]    = 'Highlighted'
-regions[content]        = 'Content'
-regions[footer]         = 'Footer'
+regions[topline]           = 'Top Line'
+regions[header]            = 'Top Bar'
+regions[highlighted]       = 'Highlighted'
+regions[content]           = 'Content'
+regions[footer]            = 'Footer'
+regions[footer_inner_left] = 'Footer Inner Left'
 
 
 ;;;;;;;;;;;;;;;;;;;;;

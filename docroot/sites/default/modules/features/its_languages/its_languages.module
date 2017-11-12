@@ -7,6 +7,72 @@
 include_once 'its_languages.features.inc';
 
 /**
+ * Implements hook_page_build().
+ */
+function its_languages_page_build(&$page) {
+  // Return early if site is monolingual.
+  if (!drupal_multilingual()) {
+    return;
+  }
+  // No need to add hreflang tags for 404/403 pages.
+  $status = drupal_get_http_header('status');
+  if ($status == '404 Not Found' || $status == '403 Forbidden') {
+    return;
+  }
+  $path = drupal_is_front_page() ? '' : $_GET['q'];
+  $links = language_negotiation_get_switch_links(LANGUAGE_TYPE_INTERFACE, $path);
+  if (empty($links->links)) {
+    return;
+  }
+
+  foreach ($links->links as $langcode => $link) {
+    // Content translation module may unset the href attribute.
+    if (!isset($link['href'])) {
+      continue;
+    }
+    $link['absolute'] = TRUE;
+    if (!isset($link['query'])) {
+      $link['query'] = array();
+    }
+    $link['query'] += drupal_get_query_parameters();
+    $attributes = array(
+      'href' => url($link['href'], $link),
+      'rel' => 'alternate',
+      'hreflang' => $link['attributes']['hreflang'],
+    );
+    drupal_add_html_head_link($attributes);
+
+    // Add x-default.
+    $default_lang = language_default();
+    if ($link['attributes']['hreflang'] == $default_lang->language) {
+      $attributes = array(
+        'href' => url($link['href'], $link),
+        'rel' => 'alternate',
+        'hreflang' => 'x-default',
+      );
+      // Adding other way because 'drupal_add_html_head_link' will owerride
+      // added link tag above. Use default key + 'x-defaut'.
+      $element = array(
+        '#tag' => 'link',
+        '#attributes' => $attributes,
+      );
+      $key = 'drupal_add_html_head_link:' . $attributes['rel'] . ':';
+      $key .= $attributes['href'] . ':x-default';
+      drupal_add_html_head($element, $key);
+    }
+  }
+}
+
+/**
+ * Implements hook_language_switch_links_alter().
+ */
+function its_languages_language_switch_links_alter(array &$links, $type, $path) {
+  foreach ($links as $langcode => &$link) {
+    $link['attributes']['hreflang'] = $langcode;
+  }
+}
+
+/**
  * Implements hook_block_info().
  */
 function its_languages_block_info() {
@@ -28,15 +94,34 @@ function its_languages_block_view($delta = '') {
     case 'language_selector':
       $langs = language_list();
       $links = array();
-      foreach ($langs as $lang) {
-        if ($lang->enabled) {
-          $class = '';
-          if ($lang->language == $language->language) {
-            $class = ' class="active"';
-          }
-          $links[] = "<a href='/{$lang->prefix}'{$class}>{$lang->language}</a>";
+      // Translation path.
+      $path = current_path();
+      // Content.
+      $tpath = language_negotiation_get_switch_links('language_url', $path);
+      foreach ($tpath->links as $langcode => $link) {
+        $class = '';
+        if ($langcode == $language->language) {
+          $link['attributes']['class'][] = 'active';
         }
+        $links[] = l(
+          $langcode,
+          $link['href'],
+          array(
+            'attributes' => $link['attributes'],
+            'language' => $link['language'],
+          )
+        );
       }
+      // foreach ($langs as $lang) {
+      //   if ($lang->enabled) {
+      //     $class = '';
+      //     if ($lang->language == $language->language) {
+      //       $class = ' class="active"';
+      //     }
+      //     $path =
+      //     $links[] = "<a href='/{$lang->prefix}'{$class}>{$lang->language}</a>";
+      //   }
+      // }
 
       $block['subject'] = '';
       $block['content'] = '<div class="language-switch">';

@@ -32,6 +32,12 @@ function its_master_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
+        'views-its_about_us_footer-block' => array(
+          'module' => 'views',
+          'delta' => 'its_about_us_footer-block',
+          'region' => 'footer_inner_left',
+          'weight' => '-10',
+        ),
       ),
     ),
   );

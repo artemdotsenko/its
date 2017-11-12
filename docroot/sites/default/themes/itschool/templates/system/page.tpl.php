@@ -173,8 +173,9 @@
           <?php print render($page['footer']); ?>
         </div>
         <div class="about col-md-3">
-          <h2><?php print t('About us'); ?></h2>
-          <p><?php print t('[about_us_description]');?></p>
+          <?php if (!empty($page['footer_inner_left'])): ?>
+            <?php print render($page['footer_inner_left']); ?>
+          <?php endif; ?>
         </div>
       </div>
     </div>

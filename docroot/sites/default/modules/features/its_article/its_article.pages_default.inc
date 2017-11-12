@@ -454,6 +454,25 @@ function its_article_default_page_manager_pages() {
   $pane->uuid = '3974638f-6798-4533-847f-d8008e586aa9';
   $display->content['new-3974638f-6798-4533-847f-d8008e586aa9'] = $pane;
   $display->panels['sidebar'][1] = 'new-3974638f-6798-4533-847f-d8008e586aa9';
+  $pane = new stdClass();
+  $pane->pid = 'new-99fc7b0a-9c95-4d66-808c-01bc733037ca';
+  $pane->panel = 'sidebar';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'its_add-panel_pane_news_ad';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '99fc7b0a-9c95-4d66-808c-01bc733037ca';
+  $display->content['new-99fc7b0a-9c95-4d66-808c-01bc733037ca'] = $pane;
+  $display->panels['sidebar'][2] = 'new-99fc7b0a-9c95-4d66-808c-01bc733037ca';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
