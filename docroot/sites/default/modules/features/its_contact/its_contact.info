@@ -126,4 +126,5 @@ features[webform][] = __2
 features[webform][] = contact_form
 features[webform][] = contact_form_en
 features[webform][] = contact_form_ua
+features[webform][] = subscribe_ua
 features_exclude[dependencies][page_manager] = page_manager

@@ -8,7 +8,8 @@
 include_once 'its_contact.features.inc';
 
 define('ITS_CONTACT_BACK_CALL_UUID', 'b68ac92d-15fa-4f70-9d21-b31734143169');
-define('ITS_CONTACT_SIGN_UP_UUID', 'f2d11b62-3e48-4729-a8cb-9455f8c57131');
+define('ITS_CONTACT_SIGN_UP_RU_UUID', 'f2d11b62-3e48-4729-a8cb-9455f8c57131');
+define('ITS_CONTACT_SIGN_UP_UA_UUID', 'a76e90f2-c972-4e33-9686-1bc8ccb8b211');
 
 /**
  * Implements hook_ctools_plugin_directory().
@@ -36,6 +37,7 @@ function its_contact_block_info() {
  * Implements hook_block_view().
  */
 function its_contact_block_view($delta = '') {
+  global $language;
   $block = array();
 
   switch ($delta) {
@@ -68,7 +70,11 @@ function its_contact_block_view($delta = '') {
 
     case 'its_contact_sign_up':
       $block['subject'] = '';
-      $id = entity_get_id_by_uuid('node', array(ITS_CONTACT_SIGN_UP_UUID));
+      $uuid = ITS_CONTACT_SIGN_UP_RU_UUID;
+      if ($langauge->language == 'ua') {
+        $uuid = ITS_CONTACT_SIGN_UP_UA_UUID;
+      }
+      $id = entity_get_id_by_uuid('node', array($uuid));
       $id = reset($id);
       $webform = module_invoke('webform', 'block_view', 'client-block-' . $id);
       $block['content'] = $webform['content'];
@@ -84,7 +90,8 @@ function its_contact_block_view($delta = '') {
 function its_contact_form_alter(&$form, &$form_state, $form_id) {
   if (strpos($form_id, 'webform_client_form_') === 0) {
     switch ($form['#node']->uuid) {
-      case ITS_CONTACT_SIGN_UP_UUID:
+      case ITS_CONTACT_SIGN_UP_RU_UUID:
+      case ITS_CONTACT_SIGN_UP_UA_UUID:
         $form['actions']['submit']['#prefix'] = '<div class="more-link-wings">';
         $form['actions']['submit']['#suffix'] = '</div>';
         break;
