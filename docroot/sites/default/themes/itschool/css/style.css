@@ -8899,9 +8899,11 @@ form .input-group-addon:first-child {
 .page-about h1 {
   margin-bottom: 50px;
 }
-.page-about .top-right-inner {
-  margin-left: 80px;
-  margin-top: 72px;
+.page-about .top-left {
+  float: left;
+  width: 50%;
+  margin-right: 110px;
+  margin-bottom: 30px;
 }
 .page-about .top-right-inner h3 {
   margin-bottom: 30px;

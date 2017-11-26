@@ -69,6 +69,8 @@ header.navbar {
     top: 32px;
     left: 40px;
     letter-spacing: 1px;
+    .i18n-ua-kv &,
+    .i18n-ru-kv &,
     .i18n-ua &,
     .i18n-ru & {
       letter-spacing: 2px;

@@ -41,6 +41,7 @@ function its_master_wysiwyg_default_profiles() {
           'Paste' => 1,
           'PasteFromWord' => 1,
           'ShowBlocks' => 1,
+          'Format' => 1,
           'Font' => 1,
           'FontSize' => 1,
           'Styles' => 1,

@@ -37,12 +37,12 @@ endif; ?>>
     <div class="row-wrapper row-1 clearfix">
       <div class="container">
         <div class="row">
-          <div class="top-left col-sm-6 no-left-padding">
+          <div class="top-left">
             <div class="top-left-inner">
               <?php print $content['top-left']; ?>
             </div>
           </div>
-          <div class="top-right col-sm-6 no-right-padding">
+          <div class="top-right">
             <div class="top-right-inner">
               <?php print $content['top-right']; ?>
             </div>
