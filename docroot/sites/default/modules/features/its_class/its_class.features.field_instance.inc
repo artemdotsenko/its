@@ -434,7 +434,7 @@ function its_class_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -491,6 +491,58 @@ function its_class_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-subject-field_parent_subject'.
+  $field_instances['node-subject-field_parent_subject'] = array(
+    'bundle' => 'subject',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_parent_subject',
+    'label' => 'Parent Subject',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-subject-field_people_teacher'.
   $field_instances['node-subject-field_people_teacher'] = array(
     'bundle' => 'subject',
@@ -542,7 +594,7 @@ function its_class_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'user_reference_autocomplete',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -593,7 +645,7 @@ function its_class_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_subject_class',
     'label' => 'Class',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -672,7 +724,7 @@ function its_class_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -726,7 +778,7 @@ function its_class_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -860,7 +912,7 @@ function its_class_field_default_field_instances() {
         'currency_code' => 'UAH',
       ),
       'type' => 'commerce_price_full',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -943,7 +995,7 @@ function its_class_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -1117,6 +1169,7 @@ function its_class_field_default_field_instances() {
   t('Full Name');
   t('Icon');
   t('Image');
+  t('Parent Subject');
   t('Position');
   t('Price');
   t('Short Description');

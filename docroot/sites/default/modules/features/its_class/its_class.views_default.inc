@@ -548,6 +548,41 @@ function its_class_views_default_views() {
     ),
   );
 
+  /* Display: Full Package Subject */
+  $handler = $view->new_display('panel_pane', 'Full Package Subject', 'panel_pane_full_package_subject');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Parent Subject (field_parent_subject) */
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['id'] = 'field_parent_subject_target_id';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['table'] = 'field_data_field_parent_subject';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['field'] = 'field_parent_subject_target_id';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_parent_subject_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_category']['name'] = 'ITS';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_parent_subject_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Parent Subject (field_parent_subject)',
+    ),
+  );
+
   /* Display: Custom Package */
   $handler = $view->new_display('attachment', 'Custom Package', 'attachment_custom_package');
   $handler->display->display_options['pager']['type'] = 'none';

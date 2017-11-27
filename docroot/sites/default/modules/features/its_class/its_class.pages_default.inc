@@ -17,7 +17,7 @@ function its_class_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -3;
   $handler->conf = array(
     'title' => 'Courses',
     'no_blocks' => 1,
@@ -172,7 +172,7 @@ function its_class_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = -1;
   $handler->conf = array(
     'title' => 'Subject',
     'no_blocks' => 0,
@@ -532,7 +532,7 @@ function its_class_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 3;
+  $handler->weight = 0;
   $handler->conf = array(
     'title' => 'About',
     'no_blocks' => 0,
@@ -943,6 +943,164 @@ function its_class_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['node_view__panel_context_86e7f628-21e3-4649-a293-ebf1002f4816'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'node_view__subject-parent';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -2;
+  $handler->conf = array(
+    'title' => 'Subject Parent',
+    'no_blocks' => 1,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'page-panel-class',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'subject-parent',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_status',
+          'settings' => NULL,
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'entity_bundle:node',
+          'settings' => array(
+            'type' => array(
+              'subject' => 'subject',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'its_class_parent',
+          'settings' => NULL,
+          'not' => FALSE,
+          'context' => 'argument_entity_id:node_1',
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => '[its:breadcrumb_home]
+[its:breadcrumb_cources]
+%node:title',
+    'panels_breadcrumbs_paths' => '<front>
+/courses',
+    'panels_breadcrumbs_home' => 1,
+  );
+  $display = new panels_display();
+  $display->layout = 'class';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+      'top-content' => NULL,
+      'bottom-content' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = 'a219e2e8-249c-4dc6-9447-0b4a6fe4ade4';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view__subject-parent';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-333dc0c7-844f-403b-9926-dedd0fc40053';
+  $pane->panel = 'left';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'its_subject-panel_pane_full_package_subject';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => array(
+      0 => 'argument_entity_id:node_1',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '333dc0c7-844f-403b-9926-dedd0fc40053';
+  $display->content['new-333dc0c7-844f-403b-9926-dedd0fc40053'] = $pane;
+  $display->panels['left'][0] = 'new-333dc0c7-844f-403b-9926-dedd0fc40053';
+  $pane = new stdClass();
+  $pane->pid = 'new-4dd542a9-8cf8-412c-82a6-a38f12bc43f4';
+  $pane->panel = 'right';
+  $pane->type = 'node_title';
+  $pane->subtype = 'node_title';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'link' => 0,
+    'markup' => 'h1',
+    'id' => '',
+    'class' => '',
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '4dd542a9-8cf8-412c-82a6-a38f12bc43f4';
+  $display->content['new-4dd542a9-8cf8-412c-82a6-a38f12bc43f4'] = $pane;
+  $display->panels['right'][0] = 'new-4dd542a9-8cf8-412c-82a6-a38f12bc43f4';
+  $pane = new stdClass();
+  $pane->pid = 'new-25a64840-27dd-4848-a621-3a642fd406d0';
+  $pane->panel = 'right';
+  $pane->type = 'node_body';
+  $pane->subtype = 'node_body';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '25a64840-27dd-4848-a621-3a642fd406d0';
+  $display->content['new-25a64840-27dd-4848-a621-3a642fd406d0'] = $pane;
+  $display->panels['right'][1] = 'new-25a64840-27dd-4848-a621-3a642fd406d0';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-4dd542a9-8cf8-412c-82a6-a38f12bc43f4';
+  $handler->conf['display'] = $display;
+  $export['node_view__subject-parent'] = $handler;
 
   return $export;
 }

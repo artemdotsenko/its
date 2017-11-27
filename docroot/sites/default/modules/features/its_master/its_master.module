@@ -43,6 +43,12 @@ function its_master_token_info() {
     'breadcrumb_contact_us' => array(
       'name' => t('Breadcrumb contact us.'),
     ),
+    // 'breadcrumb_subject_parent' => array(
+    //   'name' => t('Subject Parent Title'),
+    // ),
+    // 'breadcrumb_subject_parent_path' => array(
+    //   'name' => t('Subject Parent Path'),
+    // ),
     'contact_us_title' => array(
       'name' => t('Contact us title.'),
     ),
