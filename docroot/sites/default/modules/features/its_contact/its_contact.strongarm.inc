@@ -123,7 +123,7 @@ function its_contact_strongarm() {
           'weight' => '8',
         ),
         'rabbit_hole' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'redirect' => array(
           'weight' => '10',

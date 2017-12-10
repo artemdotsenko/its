@@ -10,7 +10,7 @@
 function its_contact_webform_defaults() {
 $webforms = array();
   $webforms['_'] = array(
-  'uid' => 0,
+  'uid' => 1,
   'title' => 'Заказать звонок',
   'log' => '',
   'status' => 1,
@@ -26,7 +26,7 @@ $webforms = array();
   'rh_redirect' => NULL,
   'rh_redirect_response' => NULL,
   'uuid' => 'b68ac92d-15fa-4f70-9d21-b31734143169',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'path' => array(
     'pathauto' => 1,
   ),
@@ -153,14 +153,14 @@ $webforms = array();
   ),
   'cid' => 0,
   'last_comment_name' => '',
-  'last_comment_uid' => 0,
+  'last_comment_uid' => 1,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'admin',
   'picture' => 0,
-  'data' => NULL,
+  'data' => 'b:0;',
 );
   $webforms['__2'] = array(
-  'uid' => 0,
+  'uid' => 1,
   'title' => 'Подписаться на рассылку',
   'log' => '',
   'status' => 1,
@@ -176,7 +176,7 @@ $webforms = array();
   'rh_redirect' => NULL,
   'rh_redirect_response' => NULL,
   'uuid' => 'f2d11b62-3e48-4729-a8cb-9455f8c57131',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'path' => array(
     'pathauto' => 1,
   ),
@@ -315,14 +315,14 @@ $webforms = array();
   ),
   'cid' => 0,
   'last_comment_name' => '',
-  'last_comment_uid' => 0,
+  'last_comment_uid' => 1,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'admin',
   'picture' => 0,
-  'data' => NULL,
+  'data' => 'b:0;',
 );
   $webforms['contact_form'] = array(
-  'uid' => 0,
+  'uid' => 1,
   'title' => 'Контактная форма',
   'log' => '',
   'status' => 1,
@@ -338,7 +338,7 @@ $webforms = array();
   'rh_redirect' => NULL,
   'rh_redirect_response' => NULL,
   'uuid' => '8461923e-d9e8-4850-9e0d-ae7082bf4c43',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'path' => array(
     'pathauto' => 1,
   ),
@@ -538,14 +538,14 @@ Submitted values are:
   ),
   'cid' => 0,
   'last_comment_name' => '',
-  'last_comment_uid' => 0,
+  'last_comment_uid' => 1,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'admin',
   'picture' => 0,
-  'data' => NULL,
+  'data' => 'b:0;',
 );
   $webforms['contact_form_en'] = array(
-  'uid' => 0,
+  'uid' => 1,
   'title' => 'Contact Form',
   'log' => '',
   'status' => 1,
@@ -561,7 +561,7 @@ Submitted values are:
   'rh_redirect' => NULL,
   'rh_redirect_response' => NULL,
   'uuid' => '6222bb1f-9b56-4a24-8e67-6e6fd0c7548c',
-  'revision_uid' => 0,
+  'revision_uid' => 1,
   'path' => array(
     'pathauto' => 1,
   ),
@@ -761,14 +761,14 @@ The results of this submission may be viewed at:
   ),
   'cid' => 0,
   'last_comment_name' => '',
-  'last_comment_uid' => 0,
+  'last_comment_uid' => 1,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'admin',
   'picture' => 0,
-  'data' => NULL,
+  'data' => 'b:0;',
 );
   $webforms['contact_form_ua'] = array(
-  'uid' => 0,
+  'uid' => 1,
   'title' => 'Контактна форма',
   'log' => '',
   'status' => 1,
@@ -958,11 +958,11 @@ The results of this submission may be viewed at:
   ),
   'cid' => 0,
   'last_comment_name' => '',
-  'last_comment_uid' => 0,
+  'last_comment_uid' => 1,
   'comment_count' => 0,
-  'name' => '',
+  'name' => 'admin',
   'picture' => 0,
-  'data' => NULL,
+  'data' => 'b:0;',
 );
   $webforms['subscribe_ua'] = array(
   'uid' => 1,

@@ -48,7 +48,7 @@ function its_contact_views_default_views() {
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-  /* Sort criterion: Taxonomy term: Weight */
+  /* Sort criterion: Taxonomy term: Вес */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -84,7 +84,7 @@ function its_contact_views_default_views() {
   /* Display: Adv in Num */
   $handler = $view->new_display('panel_pane', 'Adv in Num', 'panel_pane_adv_num');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Name */
+  /* Field: Taxonomy term: Имя */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';

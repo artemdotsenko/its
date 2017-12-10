@@ -187,6 +187,39 @@ function its_contact_field_group_info() {
   );
   $field_groups['group_contact_top|node|phones|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_social|node|phones|form';
+  $field_group->group_name = 'group_social';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'phones';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Social',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_facebook',
+      1 => 'field_instagram',
+      2 => 'field_youtube',
+      3 => 'field_google',
+      4 => 'field_googleplus',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Social',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-social field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_social|node|phones|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Banner');
@@ -194,6 +227,7 @@ function its_contact_field_group_info() {
   t('Contacts');
   t('Main');
   t('Map');
+  t('Social');
   t('Top');
 
   return $field_groups;

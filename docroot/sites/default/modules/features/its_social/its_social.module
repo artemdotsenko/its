@@ -33,29 +33,43 @@ function its_social_block_info() {
  * Implements hook_block_view().
  */
 function its_social_block_view($delta = '') {
+  global $language;
   $block = array();
 
   switch ($delta) {
     case 'its_social_links':
       $block['subject'] = '';
-      $links = array(
-        'facebook' => array(
-          'text' => t('Facebook'),
-          'path' => 'https://www.facebook.com/ischoolLITSmykolaiv/',
-        ),
-        // 'instagram' => array(
-        //   'text' => t('Instagram'),
-        //   'path' => 'https://instagram.com',
-        // ),
-        // 'youtube' => array(
-        //   'text' => t('Youtube'),
-        //   'path' => 'https://youtube.com',
-        // ),
-        // 'googleplus' => array(
-        //   'text' => t('Google+'),
-        //   'path' => 'https://googleplus.com',
-        // ),
-      );
+      $links = array();
+      $tid = its_cities_get_current_city();
+      $q = db_select('node', 'n');
+      $q->join('field_data_field_city', 'c', 'n.nid = c.entity_id');
+
+      $q->fields('n', array('nid'))
+        ->condition('n.type', 'phones')
+        ->condition('n.status', NODE_PUBLISHED)
+        ->condition('n.language', $language->language)
+        ->condition('c.field_city_tid', $tid);
+      $nid = $q->execute()
+        ->fetchField();
+      $node = node_load($nid);
+      if ($node) {
+        $fields = array(
+          'facebook',
+          'instagram',
+          'youtube',
+          'googleplus',
+        );
+        foreach ($fields as $name) {
+          $item = field_get_items('node', $node, "field_{$name}");
+          $url = isset($item[0]['url']) ? $item[0]['url'] : NULL;
+          if ($url) {
+            $links[$name] = array(
+              'text' => $item[0]['title'],
+              'path' => $url,
+            );
+          }
+        }
+      }
       $block['content'] = theme('its_social_links', array('links' => $links));
       break;
 
