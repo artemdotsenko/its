@@ -43,6 +43,17 @@ function its_cities_page_build(&$page) {
       its_cities_set_city($term->tid);
       drupal_goto('<front>');
     }
+
+    if (isset($_REQUEST['city'])) {
+      $id = its_cities_get_current_city();
+      $code = its_cities_get_city_code($id);
+      $cities = its_cities_get_cities();
+      $names = array_keys($cities);
+      if ($_REQUEST['city'] != $code && in_array($_REQUEST['city'], $names)) {
+        its_cities_set_city(NULL, $_REQUEST['city']);
+        drupal_goto('<front>');
+      }
+    }
   }
 }
 
@@ -76,7 +87,10 @@ function its_cities_block_view($delta = '') {
         // Skip current.
         if ($term->tid != $cur_tid) {
           if ($language->language == $term->language) {
-            $cities[] = l($term->name, 'taxonomy/term/' . $term->tid);
+            $code = its_cities_get_city_code($term->tid);
+            $cities[] = l($term->name, '<front>', array(
+              'query' => array('city' => $code),
+            ));
           }
         }
       }
