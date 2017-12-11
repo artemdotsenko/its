@@ -820,6 +820,7 @@ function its_class_views_default_views() {
   $handler->display->display_options['fields']['field_people_position']['table'] = 'field_data_field_people_position';
   $handler->display->display_options['fields']['field_people_position']['field'] = 'field_people_position';
   $handler->display->display_options['fields']['field_people_position']['label'] = '';
+  $handler->display->display_options['fields']['field_people_position']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_people_position']['element_label_colon'] = FALSE;
   /* Field: User: Description */
   $handler->display->display_options['fields']['field_people_description']['id'] = 'field_people_description';

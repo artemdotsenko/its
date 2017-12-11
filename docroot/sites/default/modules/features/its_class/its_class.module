@@ -7,7 +7,59 @@
 include_once 'its_class.features.inc';
 
 /**
- * Implements hook_preprocess_views_view().
+ * Implements hook_preprocess_views_view_fields().
+ */
+function its_class_preprocess_views_view_fields(&$vars) {
+  global $language;
+
+  if ($vars['view']->name == 'its_teacher' && !empty($vars['view']->result)) {
+    $subjects = NULL;
+    foreach ($vars['view']->result as $result) {
+      $q = db_select('node', 'n');
+      $q->join('field_data_field_people_teacher', 't', 'n.nid = t.entity_id');
+
+      $q->fields('n', array('nid', 'title'))
+        ->condition('n.type', 'subject')
+        ->condition('n.status', NODE_PUBLISHED)
+        ->condition('n.language', $language->language)
+        ->condition('t.field_people_teacher_uid', $result->uid);
+      $nids = $q->execute()
+        ->fetchAllKeyed();
+
+      $subjects = NULL;
+      $sub = array();
+      foreach ($nids as $nid => $title) {
+        $sub[] = l($title, 'node/' . $nid);
+      }
+      if (!empty($sub)) {
+        $subjects = implode(', ', $sub);
+      }
+    }
+    if ($subjects) {
+      $value = theme('html_tag', array(
+        'element' => array(
+          '#tag' => 'div',
+          '#attributes' => array(
+            'class' => array('field-content')
+          ),
+          '#value' => t('Teacher of: !subjects', array('!subjects' => $subjects)),
+        ),
+      ));
+      $vars['fields']['field_people_full_name']->wrapper_suffix .= theme('html_tag', array(
+        'element' => array(
+          '#tag' => 'div',
+          '#attributes' => array(
+            'class' => array('views-field', 'views-field-field-people-position'),
+          ),
+          '#value' => $value,
+        ),
+      ));
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_bootstrap_table_plugin_style().
  */
 function its_class_preprocess_views_bootstrap_table_plugin_style(&$vars) {
   $view = $vars['view'];
