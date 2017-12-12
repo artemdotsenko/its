@@ -83,11 +83,11 @@ function its_events_image_default_styles() {
 function its_events_node_info() {
   $items = array(
     'event' => array(
-      'name' => t('Event'),
+      'name' => t('Событие'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Название'),
       'help' => '',
     ),
   );

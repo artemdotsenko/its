@@ -44,14 +44,25 @@ function its_cities_page_build(&$page) {
       drupal_goto('<front>');
     }
 
+    $id = its_cities_get_current_city();
+    $cities = its_cities_get_cities();
     if (isset($_REQUEST['city'])) {
-      $id = its_cities_get_current_city();
       $code = its_cities_get_city_code($id);
-      $cities = its_cities_get_cities();
       $names = array_keys($cities);
       if ($_REQUEST['city'] != $code && in_array($_REQUEST['city'], $names)) {
         its_cities_set_city(NULL, $_REQUEST['city']);
         drupal_goto('<front>');
+      }
+    }
+
+    // Set city from current node.
+    $node = menu_get_object();
+    if ($node) {
+      $city = field_get_items('node', $node, 'field_city');
+      $city = isset($city[0]['tid']) ? $city[0]['tid'] : NULL;
+      if ($city && $city != $id && in_array($city, $cities)) {
+        its_cities_set_city($city);
+        drupal_goto(current_path());
       }
     }
   }

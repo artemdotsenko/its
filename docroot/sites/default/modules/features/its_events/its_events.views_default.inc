@@ -80,20 +80,7 @@ function its_events_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_event_image']['id'] = 'field_event_image';
-  $handler->display->display_options['fields']['field_event_image']['table'] = 'field_data_field_event_image';
-  $handler->display->display_options['fields']['field_event_image']['field'] = 'field_event_image';
-  $handler->display->display_options['fields']['field_event_image']['label'] = '';
-  $handler->display->display_options['fields']['field_event_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_image']['element_label_colon'] = FALSE;
-  /* Field: Content: Date */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
+  /* Field: Content: Название */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -113,7 +100,7 @@ function its_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '150',
   );
-  /* Field: Content: Link */
+  /* Field: Content: Ссылка */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -143,6 +130,7 @@ function its_events_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'subject' => 'subject',
+    'event' => 'event',
   );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
@@ -213,7 +201,7 @@ function its_events_views_default_views() {
   );
   $handler->display->display_options['fields']['field_subject_start_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_subject_start_date']['delta_offset'] = '0';
-  /* Field: Content: Title */
+  /* Field: Content: Название */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -260,61 +248,47 @@ function its_events_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_subject_image']['id'] = 'field_subject_image';
-  $handler->display->display_options['fields']['field_subject_image']['table'] = 'field_data_field_subject_image';
-  $handler->display->display_options['fields']['field_subject_image']['field'] = 'field_subject_image';
-  $handler->display->display_options['fields']['field_subject_image']['label'] = '';
-  $handler->display->display_options['fields']['field_subject_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_subject_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_subject_image']['settings'] = array(
-    'image_style' => 'events_list',
-    'image_link' => '',
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'subject' => 'subject',
+    'event' => 'event',
   );
-  /* Field: Content: Start date */
-  $handler->display->display_options['fields']['field_subject_start_date']['id'] = 'field_subject_start_date';
-  $handler->display->display_options['fields']['field_subject_start_date']['table'] = 'field_data_field_subject_start_date';
-  $handler->display->display_options['fields']['field_subject_start_date']['field'] = 'field_subject_start_date';
-  $handler->display->display_options['fields']['field_subject_start_date']['label'] = '';
-  $handler->display->display_options['fields']['field_subject_start_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_subject_start_date']['settings'] = array(
-    'format_type' => 'custom',
-    'custom_date_format' => 'j M Y',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => 'now',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  $handler->display->display_options['fields']['field_subject_start_date']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_subject_start_date']['delta_offset'] = '0';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '150';
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '150',
+  /* Filter criterion: Content: City (field_city) */
+  $handler->display->display_options['filters']['field_city_tid']['id'] = 'field_city_tid';
+  $handler->display->display_options['filters']['field_city_tid']['table'] = 'field_data_field_city';
+  $handler->display->display_options['filters']['field_city_tid']['field'] = 'field_city_tid';
+  $handler->display->display_options['filters']['field_city_tid']['value'] = array(
+    6 => '6',
   );
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['filters']['field_city_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_city_tid']['vocabulary'] = 'city';
+  $handler->display->display_options['filters']['field_city_tid']['hierarchy'] = 1;
+  /* Filter criterion: Content: Start date (field_subject_start_date) */
+  $handler->display->display_options['filters']['field_subject_start_date_value']['id'] = 'field_subject_start_date_value';
+  $handler->display->display_options['filters']['field_subject_start_date_value']['table'] = 'field_data_field_subject_start_date';
+  $handler->display->display_options['filters']['field_subject_start_date_value']['field'] = 'field_subject_start_date_value';
+  $handler->display->display_options['filters']['field_subject_start_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_subject_start_date_value']['granularity'] = 'minute';
+  $handler->display->display_options['filters']['field_subject_start_date_value']['default_date'] = 'now';
   $handler->display->display_options['pane_category']['name'] = 'ITS';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -345,7 +319,7 @@ function its_events_views_default_views() {
     'image_style' => 'nearest_event',
     'image_link' => '',
   );
-  /* Field: Content: Title */
+  /* Field: Content: Название */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';

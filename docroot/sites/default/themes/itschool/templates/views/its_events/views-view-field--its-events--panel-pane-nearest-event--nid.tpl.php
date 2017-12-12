@@ -22,6 +22,12 @@
  * the view is modified.
  */
 ?>
-<?php print l(t('Subject details'), "node/{$output}", array(
+<?php
+$title = t('Subject details');
+if ($row->field_data_field_subject_start_date_bundle == 'event'):
+  $title = t('Read more');
+endif;
+?>
+<?php print l($title, "node/{$output}", array(
   'attributes' => array('class' => array('btn'))
 )); ?>

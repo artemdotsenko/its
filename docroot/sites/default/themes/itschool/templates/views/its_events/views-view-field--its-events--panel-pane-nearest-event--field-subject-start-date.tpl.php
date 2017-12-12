@@ -22,7 +22,14 @@
  * the view is modified.
  */
 ?>
-<div class="countdown-title"><?php print t('till class start'); ?></div>
+
+<?php
+$title = t('till class start');
+if ($row->field_data_field_subject_start_date_bundle == 'event'):
+  $title = t('till event start');
+endif;
+?>
+<div class="countdown-title"><?php print $title; ?></div>
 <div id="timestamp" class="element-invisible"><?php print $output; ?></div>
 <div id="countdown">
   <div class="countdown-inner"></div>

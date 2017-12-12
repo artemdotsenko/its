@@ -22,5 +22,12 @@
  * the view is modified.
  */
 ?>
-<div class="subject-prefix"><?php print t('Subject theme:');?></div>
+
+<?php
+$prefix = t('Subject theme:');
+if ($row->field_data_field_subject_start_date_bundle == 'event'):
+  $prefix = '';
+endif;
+?>
+<div class="subject-prefix"><?php print $prefix;?></div>
 <?php print $output; ?>
