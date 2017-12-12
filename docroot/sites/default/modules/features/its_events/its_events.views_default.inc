@@ -80,7 +80,7 @@ function its_events_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Название */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -100,7 +100,7 @@ function its_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '150',
   );
-  /* Field: Content: Ссылка */
+  /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
@@ -201,7 +201,7 @@ function its_events_views_default_views() {
   );
   $handler->display->display_options['fields']['field_subject_start_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_subject_start_date']['delta_offset'] = '0';
-  /* Field: Content: Название */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -319,7 +319,7 @@ function its_events_views_default_views() {
     'image_style' => 'nearest_event',
     'image_link' => '',
   );
-  /* Field: Content: Название */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
