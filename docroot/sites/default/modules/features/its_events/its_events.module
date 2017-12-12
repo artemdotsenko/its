@@ -110,3 +110,16 @@ function its_events_preprocess_node(&$vars) {
     }
   }
 }
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function its_class_views_pre_view($view) {
+  if ($view->name == 'its_events') {
+    if ($view->current_display == 'panel_all_events') {
+      $pager = $view->display_handler->get_option('pager');
+      $pager['options']['text'] = t('More events');
+      $view->display_handler->set_option('pager', $pager);
+    }
+  }
+}
